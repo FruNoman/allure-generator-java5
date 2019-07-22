@@ -16,7 +16,10 @@
 package com.github.allure;
 
 import com.github.allure.allure2.Allure2Plugin;
+import com.github.allure.category.CategoriesPlugin;
+import com.github.allure.category.CategoriesTrendPlugin;
 import com.github.allure.environment.Allure1EnvironmentPlugin;
+import com.github.allure.executor.ExecutorPlugin;
 import com.github.allure.history.HistoryPlugin;
 import com.github.allure.severity.SeverityPlugin;
 import com.github.allure.status.StatusChartPlugin;
@@ -69,8 +72,8 @@ public class ConfigurationBuilder {
 //                new IdeaLinksPlugin(),
                 new HistoryPlugin(),
 //                new HistoryTrendPlugin(),
-//                new CategoriesPlugin(),
-//                new CategoriesTrendPlugin(),
+                new CategoriesPlugin(),
+                new CategoriesTrendPlugin(),
 //                new DurationPlugin(),
 //                new DurationTrendPlugin(),
                 new StatusChartPlugin(),
@@ -83,7 +86,7 @@ public class ConfigurationBuilder {
 //                new InfluxDbExportPlugin(),
 //                new PrometheusExportPlugin(),
                 new SummaryPlugin(),
-//                new ExecutorPlugin(),
+                new ExecutorPlugin(),
 //                new LaunchPlugin(),
 //                new Allure1Plugin(),
                 new Allure1EnvironmentPlugin(),

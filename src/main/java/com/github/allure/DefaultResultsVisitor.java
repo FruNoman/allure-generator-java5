@@ -151,7 +151,7 @@ public class DefaultResultsVisitor implements ResultsVisitor {
     public static String probeContentType(final File file) {
         try {
             InputStream inputStream = new FileInputStream(file);
-            return probeContentType(inputStream, getNameFromInputStream(inputStream));
+            return probeContentType(inputStream, file.getName());
         } catch (Exception e) {
             return WILDCARD;
         }
@@ -167,28 +167,12 @@ public class DefaultResultsVisitor implements ResultsVisitor {
         }
     }
 
-    private static Long getFileSizeSafe(final File path) {
+    private static Long getFileSizeSafe(final File file) {
         try {
-            return 0l;
+            return file.length();
         } catch (Exception e) {
             return 0l;
         }
     }
 
-    private static String getNameFromInputStream(InputStream inputStream) {
-        String name = "";
-        File targetFile = null;
-        try {
-            byte[] buffer = new byte[inputStream.available()];
-            inputStream.read(buffer);
-            targetFile = new File("/sdcard//targetFile.tmp");
-            OutputStream outStream = new FileOutputStream(targetFile);
-            outStream.write(buffer);
-            name = targetFile.getName();
-        } catch (Exception e) {
-
-        }
-        targetFile.deleteOnExit();
-        return name;
-    }
 }
