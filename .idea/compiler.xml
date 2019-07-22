@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="allure_generator_java5" />
+        <module name="allure-generator-java5" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="allure_generator_java5" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
