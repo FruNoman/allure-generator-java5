@@ -6,7 +6,7 @@
 
     <groupId>com.github.allure</groupId>
     <artifactId>allure-generator-java5</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
 
     <repositories>
         <repository>
@@ -102,6 +102,11 @@
             <artifactId>tika-parsers</artifactId>
             <version>1.21</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>2.12.0</version>
         </dependency>
     </dependencies>
 </project>
