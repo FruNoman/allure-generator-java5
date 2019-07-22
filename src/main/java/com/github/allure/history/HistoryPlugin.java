@@ -30,13 +30,14 @@ import io.qameta.allure.entity.Status;
 import io.qameta.allure.entity.TestResult;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.util.*;
 
 import java8.util.Objects;
+import java8.util.Optional;
 import java8.util.function.BinaryOperator;
 import java8.util.function.Consumer;
 import java8.util.function.Function;
@@ -47,6 +48,7 @@ import java8.util.stream.RefStreams;
 import java8.util.stream.Stream;
 import java8.util.stream.StreamSupport;
 
+import static io.qameta.allure.Constants.HISTORY_DIR;
 
 
 /**
@@ -192,8 +194,31 @@ public class HistoryPlugin implements Reader, Aggregator {
 
 
     @Override
-    public void readResults(Configuration var1, ResultsVisitor var2, List<File> var3) {
+    public void readResults(Configuration configuration, ResultsVisitor visitor, List<File> fileList) {
+        final JacksonContext context = configuration.getContext(JacksonContext.class);
+        Optional<File> historyFile = StreamSupport.stream(fileList).filter(new Predicate<File>() {
+            @Override
+            public boolean test(File file) {
+                return file.getName().equals(HISTORY_BLOCK_NAME);
+            }
+        }).findFirst();
 
+        Optional<File> file = StreamSupport.stream(Arrays.asList(historyFile.get().listFiles())).filter(new Predicate<File>() {
+            @Override
+            public boolean test(File file) {
+                return file.getName().equals(HISTORY_FILE_NAME);
+            }
+        }).findFirst();
+        if(file.isPresent()) {
+            if (file.get().exists()) {
+                try (InputStream is = new FileInputStream(file.get())) {
+                    final Map<String, HistoryData> history = context.getValue().readValue(is, HISTORY_TYPE);
+                    visitor.visitExtra(HISTORY_BLOCK_NAME, history);
+                } catch (IOException e) {
+                    visitor.error("Could not read history file " + file.get(), e);
+                }
+            }
+        }
     }
 
     @Override

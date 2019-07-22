@@ -73,35 +73,35 @@ public class ExecutorPlugin extends CommonJsonAggregator implements Reader {
     }
 
     @Override
-    protected List<ExecutorInfo> getData(final List<LaunchResults> launches) {
+    public List<ExecutorInfo> getData(final List<LaunchResults> launches) {
         return StreamSupport.stream(launches)
-                .map(new Function<LaunchResults, Optional<T>>() {
+                .map(new Function<LaunchResults, Optional<ExecutorInfo>>() {
                     @Override
-                    public Optional<T> apply(LaunchResults launchResults) {
+                    public Optional<ExecutorInfo> apply(LaunchResults launchResults) {
                         return launchResults.getExtra(EXECUTORS_BLOCK_NAME);
                     }
                 })
-                .filter(new Predicate<Optional<T>>() {
+                .filter(new Predicate<Optional<ExecutorInfo>>() {
                     @Override
-                    public boolean test(Optional<T> tOptional) {
+                    public boolean test(Optional<ExecutorInfo> tOptional) {
                         return tOptional.isPresent();
                     }
                 })
-                .map(new Function<Optional<T>, T>() {
+                .map(new Function<Optional<ExecutorInfo>, ExecutorInfo>() {
                     @Override
-                    public T apply(Optional<T> tOptional) {
+                    public ExecutorInfo apply(Optional<ExecutorInfo> tOptional) {
                         return tOptional.get();
                     }
                 })
-                .filter(new Predicate<T>() {
+                .filter(new Predicate<ExecutorInfo>() {
                     @Override
-                    public boolean test(T t) {
+                    public boolean test(ExecutorInfo t) {
                         return ExecutorInfo.class.isInstance(t);
                     }
                 })
-                .map(new Function<T, ExecutorInfo>() {
+                .map(new Function<ExecutorInfo, ExecutorInfo>() {
                     @Override
-                    public ExecutorInfo apply(T t) {
+                    public ExecutorInfo apply(ExecutorInfo t) {
                         return ExecutorInfo.class.cast(t);
                     }
                 })
