@@ -1,6 +1,9 @@
 import com.github.allure.ConfigurationBuilder;
 import com.github.allure.DefaultResultsVisitor;
 import com.github.allure.allure2.Allure2Plugin;
+import com.github.allure.category.CategoriesPlugin;
+import com.github.allure.category.CategoriesTrendItem;
+import com.github.allure.category.CategoriesTrendPlugin;
 import com.github.allure.environment.Allure1EnvironmentPlugin;
 import com.github.allure.history.HistoryData;
 import com.github.allure.history.HistoryPlugin;
@@ -60,5 +63,13 @@ public class Allure2PluginTests {
         SeverityPlugin.WidgetAggregator severityPlugin = new SeverityPlugin.WidgetAggregator();
         List<SeverityData> severityData =  severityPlugin.getData(list);
         System.out.println(severityData);
+
+        CategoriesPlugin categoriesPlugin = new CategoriesPlugin();
+        Tree<TestResult> cattree = categoriesPlugin.getData(list);
+        System.out.println(cattree);
+
+        CategoriesTrendPlugin categoriesTrendPlugin = new CategoriesTrendPlugin();
+        List<CategoriesTrendItem> catItem = categoriesTrendPlugin.getData(list);
+        System.out.println(catItem);
     }
 }

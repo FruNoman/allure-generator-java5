@@ -13,13 +13,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Enumeration;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
@@ -60,7 +54,20 @@ import static java8.util.Objects.nonNull;
 public class Allure2Plugin implements Reader {
     @SuppressWarnings("WeakerAccess")
     public static final String ALLURE2_RESULTS_FORMAT = "allure2";
-    private static final StageResultComparator BY_START = new StageResultComparator();
+    private static final Comparator<StageResult> BY_START = Comparators.comparing(
+            new Function<StageResult, Time>() {
+                @Override
+                public Time apply(StageResult stageResult) {
+                    return stageResult.getTime();
+                }
+            },
+            Comparators.nullsFirst(Comparators.comparing(new Function<Time, Long>() {
+                @Override
+                public Long apply(Time time) {
+                    return time.getStart();
+                }
+            }, Comparators.nullsFirst(Comparators.naturalOrder())))
+    );
 
     private final ObjectMapper mapper;
 
@@ -123,8 +130,18 @@ public class Allure2Plugin implements Reader {
         }
 
         final List<TestResultContainer> parents = findAllParents(groups, result.getUuid(), new HashSet<>());
-        dest.getBeforeStages().addAll(getStages(parents, fixture -> getBefore(fileList, visitor, fixture)));
-        dest.getAfterStages().addAll(getStages(parents, fixture -> getAfter(fileList, visitor, fixture)));
+        dest.getBeforeStages().addAll(getStages(parents, new Function<TestResultContainer, Stream<StageResult>>() {
+            @Override
+            public Stream<StageResult> apply(TestResultContainer testResultContainer) {
+                return getBefore(fileList, visitor, testResultContainer);
+            }
+        }));
+        dest.getAfterStages().addAll(getStages(parents, new Function<TestResultContainer, Stream<StageResult>>() {
+            @Override
+            public Stream<StageResult> apply(TestResultContainer testResultContainer) {
+                return getAfter(fileList, visitor, testResultContainer);
+            }
+        }));
         visitor.visitTestResult(dest);
     }
 
@@ -364,9 +381,9 @@ public class Allure2Plugin implements Reader {
 
     private File getFileFromList(List<File> fileList, String name) {
         File targetFile = null;
-        for(File file:fileList){
-            if(file.getName().contains(name)){
-                targetFile=file;
+        for (File file : fileList) {
+            if (file.getName().contains(name)) {
+                targetFile = file;
             }
         }
         return targetFile;

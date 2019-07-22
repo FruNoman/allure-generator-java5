@@ -15,6 +15,7 @@
  */
 package com.github.allure;
 
+import com.github.allure.utils.AllureUtilsAdv;
 import io.qameta.allure.core.LaunchResults;
 import io.qameta.allure.core.ResultsVisitor;
 import org.apache.tika.metadata.Metadata;
@@ -40,6 +41,7 @@ import java8.util.function.Predicate;
 import java8.util.function.Supplier;
 
 import java.util.Set;
+import java.util.function.Function;
 
 import static org.apache.commons.io.FilenameUtils.getExtension;
 import static org.apache.tika.mime.MimeTypes.getDefaultMimeTypes;
@@ -73,37 +75,41 @@ public class DefaultResultsVisitor implements ResultsVisitor {
     @Override
     public Attachment visitAttachmentFile(final File attachmentFile) {
         final RandomUidContext context = configuration.getContext(RandomUidContext.class);
-        final String uid = context.getValue().get();
-        final String realType = probeContentType(attachmentFile);
-        final String extension = Optional.of(getExtension(attachmentFile.getName()))
-                .filter(new Predicate<String>() {
-                    @Override
-                    public boolean test(String s) {
-                        return !s.isEmpty();
-                    }
-                })
-                .map(new java8.util.function.Function<String, String>() {
-                    @Override
-                    public String apply(String s) {
-                        return "." + s;
-                    }
-                })
-                .orElseGet(new Supplier<String>() {
-                    @Override
-                    public String get() {
-                        return getExtensionByMimeType(realType);
-                    }
-                });
-        final String source = uid + (extension.isEmpty() ? "" : extension);
-        final Long size = getFileSizeSafe(attachmentFile.getName());
-        Attachment attachment = new Attachment()
-                .setUid(uid)
-                .setName(attachmentFile.getName())
-                .setSource(source)
-                .setType(realType)
-                .setSize(size);
-        attachments.put(attachmentFile.getName(),attachment);
-        return attachment;
+        AllureUtilsAdv<String,Attachment> adv = new AllureUtilsAdv<>();
+        return adv.computeIfAbsent(attachments, attachmentFile.getName(), new Function<String, Attachment>() {
+            @Override
+            public Attachment apply(String s) {
+                final String uid = context.getValue().get();
+                final String realType = probeContentType(attachmentFile);
+                final String extension = Optional.of(getExtension(attachmentFile.getName()))
+                        .filter(new Predicate<String>() {
+                            @Override
+                            public boolean test(String s) {
+                                return !s.isEmpty();
+                            }
+                        })
+                        .map(new java8.util.function.Function<String, String>() {
+                            @Override
+                            public String apply(String s) {
+                                return "." + s;
+                            }
+                        })
+                        .orElseGet(new Supplier<String>() {
+                            @Override
+                            public String get() {
+                                return getExtensionByMimeType(realType);
+                            }
+                        });
+                final String source = uid + (extension.isEmpty() ? "" : extension);
+                final Long size = getFileSizeSafe(attachmentFile);
+                return new Attachment()
+                        .setUid(uid)
+                        .setName(attachmentFile.getName())
+                        .setSource(source)
+                        .setType(realType)
+                        .setSize(size);
+            }
+        });
     }
 
     @Override
@@ -161,7 +167,7 @@ public class DefaultResultsVisitor implements ResultsVisitor {
         }
     }
 
-    private static Long getFileSizeSafe(final String path) {
+    private static Long getFileSizeSafe(final File path) {
         try {
             return 0l;
         } catch (Exception e) {

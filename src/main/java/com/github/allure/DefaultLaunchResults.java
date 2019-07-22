@@ -18,11 +18,15 @@ package com.github.allure;
 import io.qameta.allure.core.LaunchResults;
 import io.qameta.allure.entity.Attachment;
 import io.qameta.allure.entity.TestResult;
+import java8.util.function.Predicate;
 import java8.util.function.Supplier;
 
 import java.util.Map;
 import java8.util.Optional;
 import java.util.Set;
+
+import java8.util.stream.Collectors;
+import java8.util.stream.StreamSupport;
 
 
 public class DefaultLaunchResults implements LaunchResults {
@@ -43,7 +47,12 @@ public class DefaultLaunchResults implements LaunchResults {
 
     @Override
     public Set<TestResult> getResults() {
-        return null;
+        return StreamSupport.stream(getAllResults()).filter(new Predicate<TestResult>() {
+            @Override
+            public boolean test(TestResult testResult) {
+                return !testResult.isHidden();
+            }
+        }).collect(Collectors.toSet());
     }
 
     @Override
