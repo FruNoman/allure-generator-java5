@@ -6,13 +6,8 @@
 
     <groupId>com.github.allure</groupId>
     <artifactId>allure-generator-java5</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
 
-    <properties>
-        <initial.java.version>1.8</initial.java.version>
-        <target.java.version>1.5</target.java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
     <repositories>
         <repository>
             <id>jitpack.io</id>
@@ -20,6 +15,11 @@
         </repository>
     </repositories>
 
+    <properties>
+        <initial.java.version>1.8</initial.java.version>
+        <target.java.version>1.5</target.java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -84,12 +84,12 @@
         <dependency>
             <groupId>com.github.FruNoman</groupId>
             <artifactId>allure-pojo-model</artifactId>
-            <version>0.0.6</version>
+            <version>0.1.0</version>
         </dependency>
         <dependency>
             <groupId>com.github.FruNoman</groupId>
             <artifactId>allure-plugin-api-java5</artifactId>
-            <version>0.2.0</version>
+            <version>0.2.3</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -101,31 +101,7 @@
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-parsers</artifactId>
             <version>1.21</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.6</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.7.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.module</groupId>
-            <artifactId>jackson-module-jaxb-annotations</artifactId>
-            <version>2.7.0</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sourceforge.streamsupport</groupId>
-            <artifactId>streamsupport</artifactId>
-            <version>1.7.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
