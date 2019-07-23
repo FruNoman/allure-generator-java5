@@ -18,6 +18,8 @@ package com.github.allure;
 import com.github.allure.allure2.Allure2Plugin;
 import com.github.allure.category.CategoriesPlugin;
 import com.github.allure.category.CategoriesTrendPlugin;
+import com.github.allure.duration.DurationPlugin;
+import com.github.allure.duration.DurationTrendPlugin;
 import com.github.allure.environment.Allure1EnvironmentPlugin;
 import com.github.allure.executor.ExecutorPlugin;
 import com.github.allure.history.HistoryPlugin;
@@ -77,8 +79,8 @@ public class ConfigurationBuilder {
 //                new HistoryTrendPlugin(),
                 new CategoriesPlugin(),
                 new CategoriesTrendPlugin(),
-//                new DurationPlugin(),
-//                new DurationTrendPlugin(),
+                new DurationPlugin(),
+                new DurationTrendPlugin(),
                 new StatusChartPlugin(),
 //                new TimelinePlugin(),
                 new SuitesPlugin(),
