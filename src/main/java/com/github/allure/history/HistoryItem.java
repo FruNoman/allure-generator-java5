@@ -17,6 +17,8 @@ package com.github.allure.history;
 
 import io.qameta.allure.entity.Status;
 import io.qameta.allure.entity.Time;
+import java8.util.Comparators;
+import java8.util.function.Function;
 
 
 import java.io.Serializable;

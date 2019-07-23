@@ -59,7 +59,7 @@ public class RetryTrendPlugin extends AbstractTrendPlugin<RetryTrendItem> {
     }
 
     @SuppressWarnings("PMD.DefaultPackage")
-    /* default */ static List<RetryTrendItem> getData(final List<LaunchResults> launchesResults) {
+    /* default */public static List<RetryTrendItem> getData(final List<LaunchResults> launchesResults) {
         final RetryTrendItem item = new RetryTrendPlugin().createCurrent(launchesResults);
         final List<RetryTrendItem> data = getHistoryItems(launchesResults);
 

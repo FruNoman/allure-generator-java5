@@ -60,7 +60,7 @@ public class CategoriesMetric implements Metric {
                 .forEach(new Consumer<String>() {
                     @Override
                     public void accept(String str) {
-                        new AllureUtilsAdv<String, AtomicLong>().computeIfAbsent(values, str, new java.util.function.Function<String, AtomicLong>() {
+                        new AllureUtilsAdv<String, AtomicLong>().computeIfAbsent(values, str, new Function<String, AtomicLong>() {
                             @Override
                             public AtomicLong apply(String s) {
                                 return new AtomicLong();

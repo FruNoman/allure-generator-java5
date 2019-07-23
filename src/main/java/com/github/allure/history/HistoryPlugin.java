@@ -209,7 +209,8 @@ public class HistoryPlugin implements Reader, Aggregator {
             }).findFirst();
             if (file.isPresent()) {
                 if (file.get().exists()) {
-                    try (InputStream is = new FileInputStream(file.get())) {
+                    try {
+                        InputStream is = new FileInputStream(file.get());
                         final Map<String, HistoryData> history = context.getValue().readValue(is, HISTORY_TYPE);
                         visitor.visitExtra(HISTORY_BLOCK_NAME, history);
                     } catch (IOException e) {

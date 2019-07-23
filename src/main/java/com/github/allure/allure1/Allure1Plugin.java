@@ -46,6 +46,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigInteger;
 
+
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -55,7 +56,6 @@ import java.util.*;
 import static com.fasterxml.jackson.databind.MapperFeature.USE_WRAPPER_NAME_AS_PROPERTY_NAME;
 import static io.qameta.allure.entity.LabelName.*;
 import static io.qameta.allure.entity.Status.*;
-import static java.util.Comparator.*;
 import static java8.util.stream.Collectors.toList;
 
 /**
@@ -83,7 +83,7 @@ public class Allure1Plugin implements Reader {
                 public String apply(Parameter parameter) {
                     return parameter.getName();
                 }
-            }, Comparators.nullsFirst(naturalOrder())), Comparators.comparing(new Function<Parameter, String>() {
+            }, Comparators.nullsFirst(Comparators.naturalOrder())), Comparators.comparing(new Function<Parameter, String>() {
                 @Override
                 public String apply(Parameter parameter) {
                     return parameter.getValue();

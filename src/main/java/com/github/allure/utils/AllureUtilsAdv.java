@@ -1,15 +1,9 @@
 package com.github.allure.utils;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Map;
-import java.util.Objects;
-import java.util.function.Function;
+import java8.util.Objects;
+import java8.util.function.Function;
 
 import static java.nio.file.Files.newDirectoryStream;
 

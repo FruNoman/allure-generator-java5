@@ -17,7 +17,7 @@
 
     <properties>
         <initial.java.version>1.8</initial.java.version>
-        <target.java.version>1.5</target.java.version>
+        <target.java.version>1.8</target.java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>

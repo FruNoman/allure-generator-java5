@@ -41,7 +41,7 @@ import java8.util.function.Predicate;
 import java8.util.function.Supplier;
 
 import java.util.Set;
-import java.util.function.Function;
+import java8.util.function.Function;
 
 import static org.apache.commons.io.FilenameUtils.getExtension;
 import static org.apache.tika.mime.MimeTypes.getDefaultMimeTypes;
@@ -88,7 +88,7 @@ public class DefaultResultsVisitor implements ResultsVisitor {
                                 return !s.isEmpty();
                             }
                         })
-                        .map(new java8.util.function.Function<String, String>() {
+                        .map(new Function<String, String>() {
                             @Override
                             public String apply(String s) {
                                 return "." + s;

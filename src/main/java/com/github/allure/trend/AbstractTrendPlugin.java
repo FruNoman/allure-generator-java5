@@ -85,46 +85,47 @@ public abstract class AbstractTrendPlugin<T> extends CompositeAggregator impleme
                 return file.getName().equals(HISTORY_DIR);
             }
         }).findFirst();
-
-        Optional<File> file = StreamSupport.stream(Arrays.asList(historyFile.get().listFiles())).filter(new Predicate<File>() {
-            @Override
-            public boolean test(File file) {
-                return file.getName().equals(jsonFileName);
-            }
-        }).findFirst();
-
-        if (file.get().exists()) {
-            try (InputStream is = new FileInputStream(file.get())) {
-                final ObjectMapper mapper = context.getValue();
-                final JsonNode jsonNode = mapper.readTree(is);
-                final List<T> history;
-                if (jsonNode != null) {
-                    history = getStream(jsonNode)
-                            .map(new Function<JsonNode, Optional<T>>() {
-                                @Override
-                                public Optional<T> apply(JsonNode jsonNode) {
-                                    return parseItem(file.get(), mapper, jsonNode);
-                                }
-                            })
-                            .filter(new Predicate<Optional<T>>() {
-                                @Override
-                                public boolean test(Optional<T> tOptional) {
-                                    return tOptional.isPresent();
-                                }
-                            })
-                            .map(new Function<Optional<T>, T>() {
-                                @Override
-                                public T apply(Optional<T> tOptional) {
-                                    return tOptional.get();
-                                }
-                            })
-                            .collect(Collectors.toList());
-                } else {
-                    history = Collections.emptyList();
+        if(historyFile.isPresent()) {
+            Optional<File> file = StreamSupport.stream(Arrays.asList(historyFile.get().listFiles())).filter(new Predicate<File>() {
+                @Override
+                public boolean test(File file) {
+                    return file.getName().equals(jsonFileName);
                 }
-                visitor.visitExtra(trendBlockName, history);
-            } catch (IOException e) {
-                visitor.error("Could not read " + trendBlockName + " file " + historyFile, e);
+            }).findFirst();
+
+            if (file.get().exists()) {
+                try (InputStream is = new FileInputStream(file.get())) {
+                    final ObjectMapper mapper = context.getValue();
+                    final JsonNode jsonNode = mapper.readTree(is);
+                    final List<T> history;
+                    if (jsonNode != null) {
+                        history = getStream(jsonNode)
+                                .map(new Function<JsonNode, Optional<T>>() {
+                                    @Override
+                                    public Optional<T> apply(JsonNode jsonNode) {
+                                        return parseItem(file.get(), mapper, jsonNode);
+                                    }
+                                })
+                                .filter(new Predicate<Optional<T>>() {
+                                    @Override
+                                    public boolean test(Optional<T> tOptional) {
+                                        return tOptional.isPresent();
+                                    }
+                                })
+                                .map(new Function<Optional<T>, T>() {
+                                    @Override
+                                    public T apply(Optional<T> tOptional) {
+                                        return tOptional.get();
+                                    }
+                                })
+                                .collect(Collectors.toList());
+                    } else {
+                        history = Collections.emptyList();
+                    }
+                    visitor.visitExtra(trendBlockName, history);
+                } catch (IOException e) {
+                    visitor.error("Could not read " + trendBlockName + " file " + historyFile, e);
+                }
             }
         }
     }
@@ -151,7 +152,7 @@ public abstract class AbstractTrendPlugin<T> extends CompositeAggregator impleme
             public Long apply(ExecutorInfo executorInfo) {
                 return executorInfo.getBuildOrder();
             }
-        }, Comparators.nullsFirst(naturalOrder()));
+        }, Comparators.nullsFirst(Comparators.naturalOrder()));
 
         return StreamSupport.stream(launches)
                 .map(new Function<LaunchResults, Optional<T>>() {
