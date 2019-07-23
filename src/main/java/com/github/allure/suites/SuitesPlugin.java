@@ -65,7 +65,7 @@ public class SuitesPlugin extends CompositeAggregator {
                 .map(new Function<LaunchResults, Set<TestResult>>() {
                     @Override
                     public Set<TestResult> apply(LaunchResults launchResults) {
-                        return launchResults.getAllResults();
+                        return launchResults.getResults();
                     }
                 })
                 .flatMap(new Function<Set<TestResult>, Stream<TestResult>>() {

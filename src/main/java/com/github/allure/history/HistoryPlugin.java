@@ -121,7 +121,7 @@ public class HistoryPlugin implements Reader, Aggregator {
                                 return new HashMap<String, HistoryData>();
                             }
                         });
-                        StreamSupport.stream(launchResults.getAllResults())
+                        StreamSupport.stream(launchResults.getResults())
                                 .filter(new Predicate<TestResult>() {
                                     @Override
                                     public boolean test(TestResult testResult) {

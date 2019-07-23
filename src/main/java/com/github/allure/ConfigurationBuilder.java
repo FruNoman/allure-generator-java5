@@ -22,6 +22,8 @@ import com.github.allure.environment.Allure1EnvironmentPlugin;
 import com.github.allure.executor.ExecutorPlugin;
 import com.github.allure.history.HistoryPlugin;
 import com.github.allure.launch.LaunchPlugin;
+import com.github.allure.retry.RetryPlugin;
+import com.github.allure.retry.RetryTrendPlugin;
 import com.github.allure.severity.SeverityPlugin;
 import com.github.allure.status.StatusChartPlugin;
 import com.github.allure.suites.SuitesPlugin;
@@ -65,8 +67,8 @@ public class ConfigurationBuilder {
                 new FreemarkerContext(),
                 new RandomUidContext(),
 //                new MarkdownDescriptionsPlugin(),
-//                new RetryPlugin(),
-//                new RetryTrendPlugin(),
+                new RetryPlugin(),
+                new RetryTrendPlugin(),
 //                new TagsPlugin(),
                 new SeverityPlugin(),
 //                new OwnerPlugin(),

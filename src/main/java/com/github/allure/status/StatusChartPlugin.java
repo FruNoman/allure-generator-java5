@@ -40,7 +40,7 @@ public class StatusChartPlugin extends CommonJsonAggregator {
                 .flatMap(new Function<LaunchResults, Stream<TestResult>>() {
                     @Override
                     public Stream<TestResult> apply(LaunchResults launchResults) {
-                        return StreamSupport.stream(launchResults.getAllResults());
+                        return StreamSupport.stream(launchResults.getResults());
                     }
                 })
                 .map(new Function<TestResult, StatusChartData>() {
