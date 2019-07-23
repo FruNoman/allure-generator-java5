@@ -18,6 +18,10 @@ package com.github.allure;
 import com.github.allure.allure2.Allure2Plugin;
 import com.github.allure.category.CategoriesPlugin;
 import com.github.allure.category.CategoriesTrendPlugin;
+import com.github.allure.core.AttachmentsPlugin;
+import com.github.allure.core.MarkdownDescriptionsPlugin;
+import com.github.allure.core.ReportWebPlugin;
+import com.github.allure.core.TestsResultsPlugin;
 import com.github.allure.duration.DurationPlugin;
 import com.github.allure.duration.DurationTrendPlugin;
 import com.github.allure.environment.Allure1EnvironmentPlugin;
@@ -70,7 +74,7 @@ public class ConfigurationBuilder {
                 new MarkdownContext(),
                 new FreemarkerContext(),
                 new RandomUidContext(),
-//                new MarkdownDescriptionsPlugin(),
+                new MarkdownDescriptionsPlugin(),
                 new RetryPlugin(),
                 new RetryTrendPlugin(),
 //                new TagsPlugin(),
@@ -86,9 +90,9 @@ public class ConfigurationBuilder {
                 new StatusChartPlugin(),
                 new TimelinePlugin(),
                 new SuitesPlugin(),
-//                new ReportWebPlugin(),
-//                new TestsResultsPlugin(),
-//                new AttachmentsPlugin(),
+                new ReportWebPlugin(),
+                new TestsResultsPlugin(),
+                new AttachmentsPlugin(),
 //                new MailPlugin(),
 //                new InfluxDbExportPlugin(),
 //                new PrometheusExportPlugin(),
