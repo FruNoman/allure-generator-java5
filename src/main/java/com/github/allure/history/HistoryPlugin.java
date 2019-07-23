@@ -200,20 +200,21 @@ public class HistoryPlugin implements Reader, Aggregator {
                 return file.getName().equals(HISTORY_BLOCK_NAME);
             }
         }).findFirst();
-
-        Optional<File> file = StreamSupport.stream(Arrays.asList(historyFile.get().listFiles())).filter(new Predicate<File>() {
-            @Override
-            public boolean test(File file) {
-                return file.getName().equals(HISTORY_FILE_NAME);
-            }
-        }).findFirst();
-        if (file.isPresent()) {
-            if (file.get().exists()) {
-                try (InputStream is = new FileInputStream(file.get())) {
-                    final Map<String, HistoryData> history = context.getValue().readValue(is, HISTORY_TYPE);
-                    visitor.visitExtra(HISTORY_BLOCK_NAME, history);
-                } catch (IOException e) {
-                    visitor.error("Could not read history file " + file.get(), e);
+        if (historyFile.isPresent()) {
+            Optional<File> file = StreamSupport.stream(Arrays.asList(historyFile.get().listFiles())).filter(new Predicate<File>() {
+                @Override
+                public boolean test(File file) {
+                    return file.getName().equals(HISTORY_FILE_NAME);
+                }
+            }).findFirst();
+            if (file.isPresent()) {
+                if (file.get().exists()) {
+                    try (InputStream is = new FileInputStream(file.get())) {
+                        final Map<String, HistoryData> history = context.getValue().readValue(is, HISTORY_TYPE);
+                        visitor.visitExtra(HISTORY_BLOCK_NAME, history);
+                    } catch (IOException e) {
+                        visitor.error("Could not read history file " + file.get(), e);
+                    }
                 }
             }
         }

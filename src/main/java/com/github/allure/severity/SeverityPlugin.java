@@ -62,7 +62,7 @@ public class SeverityPlugin extends CompositeAggregator {
                             return SeverityLevel.fromValue(s);
                         }
                     })
-                    .orElse(SeverityLevel.normal);
+                    .orElse(SeverityLevel.NORMAL);
             result.addExtraBlock(SEVERITY_BLOCK_NAME, severityLevel);
         }
 

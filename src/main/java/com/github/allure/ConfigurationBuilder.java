@@ -21,6 +21,7 @@ import com.github.allure.category.CategoriesTrendPlugin;
 import com.github.allure.environment.Allure1EnvironmentPlugin;
 import com.github.allure.executor.ExecutorPlugin;
 import com.github.allure.history.HistoryPlugin;
+import com.github.allure.launch.LaunchPlugin;
 import com.github.allure.severity.SeverityPlugin;
 import com.github.allure.status.StatusChartPlugin;
 import com.github.allure.suites.SuitesPlugin;
@@ -87,7 +88,7 @@ public class ConfigurationBuilder {
 //                new PrometheusExportPlugin(),
                 new SummaryPlugin(),
                 new ExecutorPlugin(),
-//                new LaunchPlugin(),
+                new LaunchPlugin(),
 //                new Allure1Plugin(),
                 new Allure1EnvironmentPlugin(),
                 new Allure2Plugin()

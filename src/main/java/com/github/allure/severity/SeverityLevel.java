@@ -29,11 +29,11 @@ import java8.util.stream.Stream;
  */
 public enum SeverityLevel implements Serializable {
 
-    blocker("blocker"),
-    critical("critical"),
-    normal("normal"),
-    minor("minor"),
-    trivial("trivial");
+    BLOCKER("blocker"),
+    CRITICAL("critical"),
+    NORMAL("normal"),
+    MINOR("minor"),
+    TRIVIAL("trivial");
 
     private static final long serialVersionUID = 1L;
 
