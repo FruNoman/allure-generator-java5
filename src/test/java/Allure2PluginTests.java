@@ -15,12 +15,15 @@ import com.github.allure.status.StatusChartPlugin;
 import com.github.allure.suites.SuitesPlugin;
 import com.github.allure.summary.SummaryData;
 import com.github.allure.summary.SummaryPlugin;
+import io.qameta.allure.Reader;
 import io.qameta.allure.core.Configuration;
 import io.qameta.allure.core.LaunchResults;
 import io.qameta.allure.entity.EnvironmentItem;
 import io.qameta.allure.entity.ExecutorInfo;
 import io.qameta.allure.entity.TestResult;
 import io.qameta.allure.tree.Tree;
+import java8.util.function.Consumer;
+import java8.util.stream.StreamSupport;
 import org.junit.Test;
 
 import java.io.File;
@@ -81,5 +84,21 @@ public class Allure2PluginTests {
         executorPlugin.readResults(configuration,resultsVisitor,fileList);
         List<ExecutorInfo> listEnv = executorPlugin.getData(list);
         System.out.println(listEnv);
+    }
+
+    @Test
+    public void someTest(){
+        File allureResultDirecory = new File("/home/dfrolov/allure-results");
+        List<File> fileList = Arrays.asList(allureResultDirecory.listFiles());
+        final Configuration configuration = new ConfigurationBuilder().useDefault().build();
+        final DefaultResultsVisitor visitor = new DefaultResultsVisitor(configuration);
+        StreamSupport.stream(configuration.getReaders()).forEach(new Consumer<Reader>() {
+            @Override
+            public void accept(Reader reader) {
+                reader.readResults(configuration, visitor, fileList);
+            }
+        });
+
+        LaunchResults results = visitor.getLaunchResults();
     }
 }
