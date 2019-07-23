@@ -31,6 +31,7 @@ import com.github.allure.status.StatusChartPlugin;
 import com.github.allure.suites.SuitesPlugin;
 import com.github.allure.summary.SummaryPlugin;
 
+import com.github.allure.timeline.TimelinePlugin;
 import io.qameta.allure.Extension;
 
 import io.qameta.allure.context.FreemarkerContext;
@@ -82,7 +83,7 @@ public class ConfigurationBuilder {
                 new DurationPlugin(),
                 new DurationTrendPlugin(),
                 new StatusChartPlugin(),
-//                new TimelinePlugin(),
+                new TimelinePlugin(),
                 new SuitesPlugin(),
 //                new ReportWebPlugin(),
 //                new TestsResultsPlugin(),
