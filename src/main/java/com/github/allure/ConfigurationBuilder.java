@@ -23,6 +23,7 @@ import com.github.allure.duration.DurationTrendPlugin;
 import com.github.allure.environment.Allure1EnvironmentPlugin;
 import com.github.allure.executor.ExecutorPlugin;
 import com.github.allure.history.HistoryPlugin;
+import com.github.allure.history.HistoryTrendPlugin;
 import com.github.allure.launch.LaunchPlugin;
 import com.github.allure.retry.RetryPlugin;
 import com.github.allure.retry.RetryTrendPlugin;
@@ -77,7 +78,7 @@ public class ConfigurationBuilder {
 //                new OwnerPlugin(),
 //                new IdeaLinksPlugin(),
                 new HistoryPlugin(),
-//                new HistoryTrendPlugin(),
+                new HistoryTrendPlugin(),
                 new CategoriesPlugin(),
                 new CategoriesTrendPlugin(),
                 new DurationPlugin(),
