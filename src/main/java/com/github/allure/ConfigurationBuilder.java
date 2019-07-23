@@ -15,6 +15,7 @@
  */
 package com.github.allure;
 
+import com.github.allure.allure1.Allure1Plugin;
 import com.github.allure.allure2.Allure2Plugin;
 import com.github.allure.category.CategoriesPlugin;
 import com.github.allure.category.CategoriesTrendPlugin;
@@ -99,7 +100,7 @@ public class ConfigurationBuilder {
                 new SummaryPlugin(),
                 new ExecutorPlugin(),
                 new LaunchPlugin(),
-//                new Allure1Plugin(),
+                new Allure1Plugin(),
                 new Allure1EnvironmentPlugin(),
                 new Allure2Plugin()
 //                new GaPlugin()
