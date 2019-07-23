@@ -16,11 +16,9 @@
 package com.github.allure.suites;
 
 
-import io.qameta.allure.Aggregator;
-import io.qameta.allure.CommonJsonAggregator;
-import io.qameta.allure.CompositeAggregator;
-import io.qameta.allure.Constants;
+import io.qameta.allure.*;
 import io.qameta.allure.core.LaunchResults;
+import io.qameta.allure.csv.CsvExportSuite;
 import io.qameta.allure.entity.TestResult;
 import io.qameta.allure.tree.*;
 
@@ -52,10 +50,10 @@ public class SuitesPlugin extends CompositeAggregator {
     protected static final String CSV_FILE_NAME = "suites.csv";
 
     public SuitesPlugin() {
-        super(Arrays.asList(new JsonAggregator(),new WidgetAggregator()));
+        super(Arrays.asList(new JsonAggregator(), new WidgetAggregator(), new CsvExportAggregator()));
     }
 
-    public static  Tree<TestResult> getData(final List<LaunchResults> launchResults) {
+    public static Tree<TestResult> getData(final List<LaunchResults> launchResults) {
         final Tree<TestResult> xunit = new TestResultTree(SUITES, new TreeClassifier<TestResult>() {
             @Override
             public List<TreeLayer> classify(TestResult item) {
@@ -104,49 +102,73 @@ public class SuitesPlugin extends CompositeAggregator {
         }
     }
 
+    private static class CsvExportAggregator extends CommonCsvExportAggregator<CsvExportSuite> {
+
+        CsvExportAggregator() {
+            super(CSV_FILE_NAME, CsvExportSuite.class);
+        }
+
+        @Override
+        protected List<CsvExportSuite> getData(final List<LaunchResults> launchesResults) {
+            return StreamSupport.stream(launchesResults)
+                    .flatMap(new Function<LaunchResults, Stream<TestResult>>() {
+                        @Override
+                        public Stream<TestResult> apply(LaunchResults launchResults) {
+                            return StreamSupport.stream(launchResults.getResults());
+                        }
+                    })
+                    .map(new Function<TestResult, CsvExportSuite>() {
+                        @Override
+                        public CsvExportSuite apply(TestResult testResult) {
+                            return new CsvExportSuite(testResult);
+                        }
+                    }).collect(Collectors.toList());
+        }
+    }
+
     private static class WidgetAggregator extends CommonJsonAggregator {
 
         WidgetAggregator() {
             super(Constants.WIDGETS_DIR, JSON_FILE_NAME);
         }
 
-    protected Object getData(final List<LaunchResults> launches) {
-        final Tree<TestResult> data = SuitesPlugin.getData(launches);
-        final List<TreeWidgetItem> items = StreamSupport.stream(data.getChildren())
-                .filter(new Predicate<TreeNode>() {
-                    @Override
-                    public boolean test(TreeNode treeNode) {
-                        return TestResultTreeGroup.class.isInstance(treeNode);
-                    }
-                })
-                .map(new Function<TreeNode, TestResultTreeGroup>() {
-                    @Override
-                    public TestResultTreeGroup apply(TreeNode treeNode) {
-                        return TestResultTreeGroup.class.cast(treeNode);
-                    }
-                })
-                .map(new Function<TestResultTreeGroup, TreeWidgetItem>() {
-                    @Override
-                    public TreeWidgetItem apply(TestResultTreeGroup testResultTreeGroup) {
-                        return toWidgetItem(testResultTreeGroup);
-                    }
-                })
-                .sorted(new Comparator<TreeWidgetItem>() {
-                    @Override
-                    public int compare(TreeWidgetItem o1, TreeWidgetItem o2) {
-                        return (int) (o1.getStatistic().getTotal()-o2.getStatistic().getTotal());
-                    }
-                })
-                .limit(10)
-                .collect(Collectors.toList());
-        return new TreeWidgetData().setItems(items).setTotal(data.getChildren().size());
-    }
+        protected Object getData(final List<LaunchResults> launches) {
+            final Tree<TestResult> data = SuitesPlugin.getData(launches);
+            final List<TreeWidgetItem> items = StreamSupport.stream(data.getChildren())
+                    .filter(new Predicate<TreeNode>() {
+                        @Override
+                        public boolean test(TreeNode treeNode) {
+                            return TestResultTreeGroup.class.isInstance(treeNode);
+                        }
+                    })
+                    .map(new Function<TreeNode, TestResultTreeGroup>() {
+                        @Override
+                        public TestResultTreeGroup apply(TreeNode treeNode) {
+                            return TestResultTreeGroup.class.cast(treeNode);
+                        }
+                    })
+                    .map(new Function<TestResultTreeGroup, TreeWidgetItem>() {
+                        @Override
+                        public TreeWidgetItem apply(TestResultTreeGroup testResultTreeGroup) {
+                            return toWidgetItem(testResultTreeGroup);
+                        }
+                    })
+                    .sorted(new Comparator<TreeWidgetItem>() {
+                        @Override
+                        public int compare(TreeWidgetItem o1, TreeWidgetItem o2) {
+                            return (int) (o1.getStatistic().getTotal() - o2.getStatistic().getTotal());
+                        }
+                    })
+                    .limit(10)
+                    .collect(Collectors.toList());
+            return new TreeWidgetData().setItems(items).setTotal(data.getChildren().size());
+        }
 
-    private static TreeWidgetItem toWidgetItem(final TestResultTreeGroup group) {
-        return new TreeWidgetItem()
-                .setUid(group.getUid())
-                .setName(group.getName())
-                .setStatistic(calculateStatisticByLeafs(group));
+        private static TreeWidgetItem toWidgetItem(final TestResultTreeGroup group) {
+            return new TreeWidgetItem()
+                    .setUid(group.getUid())
+                    .setName(group.getName())
+                    .setStatistic(calculateStatisticByLeafs(group));
+        }
     }
-}
 }

@@ -29,11 +29,9 @@ import io.qameta.allure.entity.Statistic;
 import io.qameta.allure.entity.Status;
 import io.qameta.allure.entity.TestResult;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
 
 import java8.util.Objects;
@@ -153,8 +151,8 @@ public class HistoryPlugin implements Reader, Aggregator {
 
         HistoryData data = history.get(result.getHistoryId());
         if (data == null) {
-            data= new HistoryData().setStatistic(new Statistic());
-            history.put(result.getHistoryId(),data);
+            data = new HistoryData().setStatistic(new Statistic());
+            history.put(result.getHistoryId(), data);
         }
         data.getStatistic().update(result);
         if (!data.getItems().isEmpty()) {
@@ -209,7 +207,7 @@ public class HistoryPlugin implements Reader, Aggregator {
                 return file.getName().equals(HISTORY_FILE_NAME);
             }
         }).findFirst();
-        if(file.isPresent()) {
+        if (file.isPresent()) {
             if (file.get().exists()) {
                 try (InputStream is = new FileInputStream(file.get())) {
                     final Map<String, HistoryData> history = context.getValue().readValue(is, HISTORY_TYPE);
@@ -222,7 +220,15 @@ public class HistoryPlugin implements Reader, Aggregator {
     }
 
     @Override
-    public void aggregate(Configuration configuration, List<LaunchResults> list, String s) throws IOException {
-
+    public void aggregate(Configuration configuration, List<LaunchResults> launchesResults, String outputDirectory) throws IOException {
+        final JacksonContext context = configuration.getContext(JacksonContext.class);
+        final File historyFile = new File(outputDirectory + File.separator + HISTORY_BLOCK_NAME + File.separator + HISTORY_FILE_NAME);
+        historyFile.getParentFile().mkdirs();
+        if (!historyFile.exists()) {
+            historyFile.createNewFile();
+        }
+        try (OutputStream os = new FileOutputStream(historyFile)) {
+            context.getValue().writeValue(os, getData(launchesResults));
+        }
     }
 }

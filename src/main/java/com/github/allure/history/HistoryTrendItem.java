@@ -48,4 +48,36 @@ public class HistoryTrendItem implements Serializable {
         this.data = statistic;
         return this;
     }
+
+    public Statistic getData() {
+        return data;
+    }
+
+    public void setData(Statistic data) {
+        this.data = data;
+    }
+
+    public Long getBuildOrder() {
+        return buildOrder;
+    }
+
+    public void setBuildOrder(Long buildOrder) {
+        this.buildOrder = buildOrder;
+    }
+
+    public String getReportUrl() {
+        return reportUrl;
+    }
+
+    public void setReportUrl(String reportUrl) {
+        this.reportUrl = reportUrl;
+    }
+
+    public String getReportName() {
+        return reportName;
+    }
+
+    public void setReportName(String reportName) {
+        this.reportName = reportName;
+    }
 }

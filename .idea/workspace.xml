@@ -2,19 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d096a56-5913-4157-840c-ebea4a2426d5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryTrendPlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Allure2PluginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Allure2PluginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryTrendItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryTrendItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Allure2PluginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Allure2PluginTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryTrendItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryTrendItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$JsonAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$JsonAggregator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,10 +36,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/ConfigurationBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="195" selection-start-line="195" selection-end-line="195" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+            <state relative-caret-position="190">
+              <caret line="87" selection-start-line="87" selection-end-line="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,42 +66,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-plugin-api-java5/0.2.3/allure-plugin-api-java5-0.2.3.jar!/io/qameta/allure/CompositeAggregator.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesTrendItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="44" column="19" lean-forward="true" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/environment/Allure1EnvironmentPlugin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
-              <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/executor/ExecutorPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-205">
+            <state relative-caret-position="60">
               <caret line="56" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,10 +80,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesTrendPlugin.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/allure2/Allure2Plugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-790">
-              <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="38" />
+            <state relative-caret-position="495">
+              <caret line="80" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,46 +91,59 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/Category.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1206#1207#0" expanded="true" />
-                <element signature="e#1233#1234#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/allure2/TestContainerIgnoreConflictsMixin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-85">
-              <caret line="33" column="45" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesMetric.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="63" column="37" lean-forward="true" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="570">
+              <caret line="101" selection-start-line="101" selection-end-line="101" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-490">
+              <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2463#2464#0" expanded="true" />
+                <element signature="e#2547#2548#0" expanded="true" />
+                <element signature="e#3300#3301#0" expanded="true" />
+                <element signature="e#3369#3370#0" expanded="true" />
+                <element signature="e#4596#4597#0" expanded="true" />
+                <element signature="e#4663#4664#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/summary/SummaryData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/summary/SummaryPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/trend/AbstractTrendPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,7 +175,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/environment/Allure1EnvironmentPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/severity/SeverityPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/status/StatusChartPlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/summary/SummaryPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/DefaultConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/main.java" />
@@ -184,15 +187,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/DefaultLaunchResults.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/trend/TrendItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesTrendItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/allure/trend/AbstractTrendPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/category/Category.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesTrendPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/ConfigurationBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/DefaultResultsVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/executor/ExecutorPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryPlugin.java" />
         <option value="$PROJECT_DIR$/src/test/java/Allure2PluginTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/allure/trend/AbstractTrendPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryTrendItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryTrendPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java" />
       </list>
     </option>
   </component>
@@ -283,6 +289,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.allure.history" />
       <recent name="com.github.allure.executor" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -419,16 +426,17 @@
       <option name="project" value="LOCAL" />
       <updated>1563810851262</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add History Plugin reader">
+      <created>1563868986082</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1563868986082</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Allure2PluginTests_test_(1) - 2019.07.22 at 18h 38m 21s.xml">
-      <configuration name="Allure2PluginTests.test (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Allure2PluginTests_test_(1) - 2019.07.22 at 18h 39m 31s.xml">
-      <configuration name="Allure2PluginTests.test (1)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Allure2PluginTests_test_(1) - 2019.07.22 at 18h 43m 08s.xml">
       <configuration name="Allure2PluginTests.test (1)" configurationId="JUnit" />
     </history-entry>
@@ -453,11 +461,17 @@
     <history-entry file="Allure2PluginTests_someTest - 2019.07.23 at 10h 39m 13s.xml">
       <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Allure2PluginTests_someTest - 2019.07.23 at 11h 35m 40s.xml">
+      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Allure2PluginTests_someTest - 2019.07.23 at 11h 36m 10s.xml">
+      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1920" height="1082" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26307365" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26307365" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -467,7 +481,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32903227" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.35668105" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.35668105" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -527,7 +541,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryPlugin.java</url>
-          <line>197</line>
+          <line>195</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
@@ -590,14 +604,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/main.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.6/commons-io-2.6.jar!/org/apache/commons/io/FilenameUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="369" column="25" selection-start-line="369" selection-start-column="25" selection-end-line="369" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/utils/AllureUtilsAdv.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -652,13 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-pojo-model/0.1.0/allure-pojo-model-0.1.0.jar!/java8/util/stream/Stream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -738,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/ConfigurationBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-plugin-api-java5/0.2.3/allure-plugin-api-java5-0.2.3.jar!/io/qameta/allure/CommonJsonAggregator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -767,13 +759,6 @@
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-plugin-api-java5/0.2.3/allure-plugin-api-java5-0.2.3.jar!/io/qameta/allure/Aggregator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-plugin-api-java5/0.2.3/allure-plugin-api-java5-0.2.3.jar!/io/qameta/allure/Reader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
@@ -808,119 +793,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/summary/SummaryData.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-pojo-model/0.1.0/allure-pojo-model-0.1.0.jar!/java8/util/stream/Stream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-130">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        <state relative-caret-position="171">
+          <caret line="70" column="10" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryData.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-plugin-api-java5/0.2.3/allure-plugin-api-java5-0.2.3.jar!/io/qameta/allure/Reader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryTrendItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/severity/SeverityData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/severity/SeverityPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-525">
-          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/status/StatusChartData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/status/StatusChartPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-955">
-          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/summary/SummaryPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/trend/AbstractTrendPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="81" column="72" selection-start-line="81" selection-start-column="72" selection-end-line="81" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="197" selection-start-line="197" selection-end-line="197" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/allure2/Allure2Plugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -933,18 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesMetric.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="63" column="37" lean-forward="true" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+        <state relative-caret-position="330">
+          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -953,8 +826,8 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-plugin-api-java5/0.2.3/allure-plugin-api-java5-0.2.3.jar!/io/qameta/allure/CompositeAggregator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="165">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -970,8 +843,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesTrendPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-790">
-          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="38" />
+        <state relative-caret-position="275">
+          <caret line="44" column="51" lean-forward="true" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -980,7 +853,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="375">
           <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -992,8 +865,161 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/environment/Allure1EnvironmentPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
+        <state relative-caret-position="170">
           <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryTrendItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+          <folding>
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1730#1731#0" expanded="true" />
+            <element signature="e#1765#1766#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
+            <element signature="e#1848#1849#0" expanded="true" />
+            <element signature="e#1892#1893#0" expanded="true" />
+            <element signature="e#1928#1929#0" expanded="true" />
+            <element signature="e#1960#1961#0" expanded="true" />
+            <element signature="e#2010#2011#0" expanded="true" />
+            <element signature="e#2052#2053#0" expanded="true" />
+            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#2122#2123#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
+            <element signature="e#2218#2219#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryTrendPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1195">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/severity/SeverityLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/severity/SeverityData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-175">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/severity/SeverityPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/status/StatusChartPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/status/StatusChartData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-954">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-490">
+          <caret line="69" column="18" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2463#2464#0" expanded="true" />
+            <element signature="e#2547#2548#0" expanded="true" />
+            <element signature="e#3300#3301#0" expanded="true" />
+            <element signature="e#3369#3370#0" expanded="true" />
+            <element signature="e#4596#4597#0" expanded="true" />
+            <element signature="e#4663#4664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/summary/SummaryData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/summary/SummaryPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="55" column="29" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/trend/AbstractTrendPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/ConfigurationBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="89" column="31" selection-start-line="89" selection-start-column="31" selection-end-line="89" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="195" selection-start-line="195" selection-end-line="195" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1002,12 +1028,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/executor/ExecutorPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-205">
+        <state relative-caret-position="60">
           <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1633#1634#0" expanded="true" />
             <element signature="e#1695#1696#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/allure2/Allure2Plugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
