@@ -1,107 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d096a56-5913-4157-840c-ebea4a2426d5" name="Default Changelist" comment="add Allure1Plugin">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/owner/OwnerPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/prometheus/PrometheusExportPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/prometheus/PrometheusMetricLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/tags/TagsPlugin.java" afterDir="false" />
+    <list default="true" id="8d096a56-5913-4157-840c-ebea4a2426d5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/ConfigurationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/ConfigurationBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Allure2PluginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Allure2PluginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/ConfigurationBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/ConfigurationBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultLaunchResults.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultLaunchResults.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/ParameterComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/ParameterComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/StageResultComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/StageResultComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$24.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$25.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$26.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$27.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$28.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$29.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$30.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$31.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/TestContainerIgnoreConflictsMixin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/TestContainerIgnoreConflictsMixin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryTrendItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryTrendItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityLevel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityLevel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityLevel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$JsonAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$JsonAggregator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Allure2PluginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Allure2PluginTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -119,11 +21,61 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="98" column="47" lean-forward="true" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
+            <state relative-caret-position="395">
+              <caret line="117" selection-start-line="117" selection-end-line="117" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4545#4546#0" expanded="true" />
                 <element signature="e#4629#4630#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="160" column="33" lean-forward="true" selection-start-line="160" selection-start-column="33" selection-end-line="160" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3271#3272#0" expanded="true" />
+                <element signature="e#3347#3348#0" expanded="true" />
+                <element signature="e#4200#4201#0" expanded="true" />
+                <element signature="e#4268#4269#0" expanded="true" />
+                <element signature="e#4505#4506#0" expanded="true" />
+                <element signature="e#4586#4587#0" expanded="true" />
+                <element signature="e#5098#5099#0" expanded="true" />
+                <element signature="e#5172#5173#0" expanded="true" />
+                <element signature="e#5723#5724#0" expanded="true" />
+                <element signature="e#5801#5802#0" expanded="true" />
+                <element signature="e#7651#7652#0" expanded="true" />
+                <element signature="e#7724#7725#0" expanded="true" />
+                <element signature="e#11807#11808#0" expanded="true" />
+                <element signature="e#11899#11900#0" expanded="true" />
+                <element signature="e#13949#13950#0" expanded="true" />
+                <element signature="e#14041#14042#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/severity/SeverityPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/owner/OwnerPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -132,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-plugin-api-java5/0.2.4/allure-plugin-api-java5-0.2.4.jar!/io/qameta/allure/CompositeAggregator.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="90">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -141,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/core/MarkdownDescriptionsPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-70">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="451">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -162,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
+            <state relative-caret-position="181">
               <caret line="107" selection-start-line="107" selection-end-line="107" />
               <folding>
                 <element signature="e#3542#3543#0" expanded="true" />
@@ -183,43 +135,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-plugin-api-java5/0.2.4/allure-plugin-api-java5-0.2.4.jar!/io/qameta/allure/Aggregator.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/ConfigurationBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="102" column="25" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/prometheus/PrometheusMetricLine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="e#1166#1167#0" expanded="true" />
-                <element signature="e#1193#1194#0" expanded="true" />
-                <element signature="e#1223#1224#0" expanded="true" />
-                <element signature="e#1249#1250#0" expanded="true" />
-                <element signature="e#1281#1282#0" expanded="true" />
-                <element signature="e#1309#1310#0" expanded="true" />
-                <element signature="e#1342#1343#0" expanded="true" />
-                <element signature="e#1371#1372#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/prometheus/PrometheusExportPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="720">
@@ -267,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesTrendItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/category/Category.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesTrendPlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryTrendItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryTrendPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/launch/LaunchInfo.java" />
@@ -308,6 +222,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/ConfigurationBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java" />
         <option value="$PROJECT_DIR$/src/test/java/Allure2PluginTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java" />
       </list>
     </option>
   </component>
@@ -370,16 +285,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="allure" type="462c0819:PsiDirectoryNode" />
-              <item name="prometheus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allure_generator_java5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allure_generator_java5" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="allure" type="462c0819:PsiDirectoryNode" />
-              <item name="suites" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="allure_generator_java5" type="b2602c69:ProjectViewProjectNode" />
@@ -402,6 +308,24 @@
             <path>
               <item name="allure_generator_java5" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="allure_generator_java5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.github.FruNoman:allure-plugin-api-java5:0.2.4" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="allure_generator_java5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.github.FruNoman:allure-plugin-api-java5:0.2.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="allure-plugin-api-java5-0.2.4.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="allure_generator_java5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.github.FruNoman:allure-plugin-api-java5:0.2.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="allure-plugin-api-java5-0.2.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="allure" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -623,31 +547,17 @@
       <option name="project" value="LOCAL" />
       <updated>1563895797213</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add Prometeus Tag and Owner Plugin">
+      <created>1563965601471</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563965601471</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Allure2PluginTests_someTest - 2019.07.23 at 12h 55m 49s.xml">
-      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Allure2PluginTests_someTest - 2019.07.23 at 17h 57m 36s.xml">
-      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Allure2PluginTests_someTest - 2019.07.23 at 18h 14m 10s.xml">
-      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Allure2PluginTests_someTest - 2019.07.23 at 19h 17m 56s.xml">
-      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Allure2PluginTests_someTest - 2019.07.23 at 19h 18m 18s.xml">
-      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Allure2PluginTests_someTest - 2019.07.23 at 19h 20m 12s.xml">
-      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Allure2PluginTests_someTest - 2019.07.24 at 13h 48m 00s.xml">
-      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Allure2PluginTests_someTest - 2019.07.24 at 13h 49m 51s.xml">
       <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
     </history-entry>
@@ -655,6 +565,27 @@
       <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Allure2PluginTests_someTest - 2019.07.24 at 13h 53m 05s.xml">
+      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Allure2PluginTests_someTest - 2019.07.24 at 13h 58m 56s.xml">
+      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Allure2PluginTests_someTest - 2019.07.24 at 14h 01m 33s.xml">
+      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Allure2PluginTests_someTest - 2019.07.24 at 14h 02m 21s.xml">
+      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Allure2PluginTests_someTest - 2019.07.24 at 14h 11m 33s.xml">
+      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Allure2PluginTests_someTest - 2019.07.24 at 14h 11m 46s.xml">
+      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Allure2PluginTests_someTest - 2019.07.24 at 14h 14m 00s.xml">
+      <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Allure2PluginTests_someTest - 2019.07.24 at 14h 15m 38s.xml">
       <configuration name="Allure2PluginTests.someTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -701,7 +632,8 @@
     <MESSAGE value="add Duration plugin" />
     <MESSAGE value="add Timeline plugin" />
     <MESSAGE value="add Allure1Plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Allure1Plugin" />
+    <MESSAGE value="add Prometeus Tag and Owner Plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Prometeus Tag and Owner Plugin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -723,12 +655,6 @@
           <line>117</line>
           <properties />
           <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java</url>
-          <line>100</line>
-          <properties />
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java</url>
@@ -755,34 +681,21 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java</url>
-          <line>52</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java</url>
+          <line>164</line>
           <properties />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java</url>
-          <line>107</line>
-          <properties />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java</url>
-          <line>109</line>
-          <properties />
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>processDescriptions(launchesResults, markdownContext);</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>LaunchResults results = visitor.getLaunchResults();</expression-string>
         <language-id>JAVA</language-id>
@@ -823,21 +736,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>catItem</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-plugin-api-java5/0.2.4/allure-plugin-api-java5-0.2.4.jar!/io/qameta/allure/entity/TestResult.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="107" column="28" selection-start-line="107" selection-start-column="28" selection-end-line="107" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-pojo-model/0.1.1/allure-pojo-model-0.1.1.jar!/java8/util/stream/RefStreams.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1108,16 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2880">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesTrendItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1172,20 +1063,6 @@
           <caret line="81" column="56" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/owner/OwnerPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="e#1902#1903#0" expanded="true" />
-            <element signature="e#2170#2171#0" expanded="true" />
-            <element signature="e#2262#2263#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1246,10 +1123,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/core/MarkdownDescriptionsPlugin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/prometheus/PrometheusExportPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-70">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="720">
+          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1258,14 +1135,14 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/FruNoman/allure-plugin-api-java5/0.2.4/allure-plugin-api-java5-0.2.4.jar!/io/qameta/allure/CompositeAggregator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="90">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
+        <state relative-caret-position="181">
           <caret line="107" selection-start-line="107" selection-end-line="107" />
           <folding>
             <element signature="e#3542#3543#0" expanded="true" />
@@ -1275,23 +1152,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/core/MarkdownDescriptionsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="98" column="47" lean-forward="true" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
+        <state relative-caret-position="451">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/severity/SeverityPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/owner/OwnerPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4545#4546#0" expanded="true" />
             <element signature="e#4629#4630#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/prometheus/PrometheusExportPlugin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+        <state relative-caret-position="135">
+          <caret line="160" column="33" lean-forward="true" selection-start-line="160" selection-start-column="33" selection-end-line="160" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3271#3272#0" expanded="true" />
+            <element signature="e#3347#3348#0" expanded="true" />
+            <element signature="e#4200#4201#0" expanded="true" />
+            <element signature="e#4268#4269#0" expanded="true" />
+            <element signature="e#4505#4506#0" expanded="true" />
+            <element signature="e#4586#4587#0" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5172#5173#0" expanded="true" />
+            <element signature="e#5723#5724#0" expanded="true" />
+            <element signature="e#5801#5802#0" expanded="true" />
+            <element signature="e#7651#7652#0" expanded="true" />
+            <element signature="e#7724#7725#0" expanded="true" />
+            <element signature="e#11807#11808#0" expanded="true" />
+            <element signature="e#11899#11900#0" expanded="true" />
+            <element signature="e#13949#13950#0" expanded="true" />
+            <element signature="e#14041#14042#0" expanded="true" />
           </folding>
         </state>
       </provider>

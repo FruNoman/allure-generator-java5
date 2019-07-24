@@ -141,38 +141,36 @@ public class CategoriesPlugin extends CompositeAggregator implements Reader {
     @SuppressWarnings("PMD.DefaultPackage")
     /* default */ static void addCategoriesForResults(final List<LaunchResults> launchesResults) {
         StreamSupport.stream(launchesResults).forEach(new Consumer<LaunchResults>() {
-                                                          @Override
-                                                          public void accept(LaunchResults launchResults) {
-                                                              final List<Category> categories = launchResults.getExtra(CATEGORIES, new Supplier<List<Category>>() {
-                                                                  @Override
-                                                                  public List<Category> get() {
-                                                                      return Collections.emptyList();
-                                                                  }
-                                                              });
-                                                              StreamSupport.stream(launchResults.getResults()).forEach(new Consumer<TestResult>() {
-                                                                  @Override
-                                                                  public void accept(TestResult testResult) {
-                                                                      final List<Category> resultCategories = testResult.getExtraBlock(CATEGORIES, new ArrayList<>());
-                                                                      StreamSupport.stream(categories).forEach(new Consumer<Category>() {
-                                                                          @Override
-                                                                          public void accept(Category category) {
-                                                                              if (matches(testResult, category)) {
-                                                                                  resultCategories.add(category);
-                                                                              }
-                                                                              if (resultCategories.isEmpty() && Status.FAILED.equals(testResult.getStatus())) {
-                                                                                  testResult.getExtraBlock(CATEGORIES, new ArrayList<Category>()).add(FAILED_TESTS);
-                                                                              }
-                                                                              if (resultCategories.isEmpty() && Status.BROKEN.equals(testResult.getStatus())) {
-                                                                                  testResult.getExtraBlock(CATEGORIES, new ArrayList<Category>()).add(BROKEN_TESTS);
-                                                                              }
-                                                                          }
-
-                                                                      });
-                                                                  }
-                                                              });
-                                                          }
-                                                      }
-        );
+            @Override
+            public void accept(LaunchResults launch) {
+                final List<Category> categories = launch.getExtra(CATEGORIES, new Supplier<List<Category>>() {
+                    @Override
+                    public List<Category> get() {
+                        return Collections.emptyList();
+                    }
+                });
+                StreamSupport.stream(launch.getResults()).forEach(new Consumer<TestResult>() {
+                    @Override
+                    public void accept(TestResult result) {
+                        final List<Category> resultCategories = result.getExtraBlock(CATEGORIES, new ArrayList<>());
+                        StreamSupport.stream(categories).forEach(new Consumer<Category>() {
+                            @Override
+                            public void accept(Category category) {
+                                if (matches(result, category)) {
+                                    resultCategories.add(category);
+                                }
+                            }
+                        });
+                        if (resultCategories.isEmpty() && Status.FAILED.equals(result.getStatus())) {
+                            result.getExtraBlock(CATEGORIES, new ArrayList<Category>()).add(FAILED_TESTS);
+                        }
+                        if (resultCategories.isEmpty() && Status.BROKEN.equals(result.getStatus())) {
+                            result.getExtraBlock(CATEGORIES, new ArrayList<Category>()).add(BROKEN_TESTS);
+                        }
+                    }
+                });
+            }
+        });
     }
 
     protected static List<TreeLayer> groupByCategories(final TestResult testResult) {
