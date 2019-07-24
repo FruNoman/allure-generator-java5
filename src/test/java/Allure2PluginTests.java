@@ -114,7 +114,9 @@ public class Allure2PluginTests {
             }
         });
 
-        System.out.println(launchList);
+        SummaryPlugin summaryPlugin = new SummaryPlugin();
+        SummaryData summaryData = summaryPlugin.getData(launchList);
+        System.out.println(summaryData);
 
     }
 }
