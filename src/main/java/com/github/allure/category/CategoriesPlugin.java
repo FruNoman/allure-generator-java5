@@ -154,7 +154,7 @@ public class CategoriesPlugin extends CompositeAggregator implements Reader {
                     @Override
                     public void accept(TestResult result) {
                         final List<Category> resultCategories = result.getExtraBlock(CATEGORIES, new ArrayList<>());
-                        categories.forEach(new java.util.function.Consumer<Category>() {
+                        StreamSupport.stream(categories).forEach(new Consumer<Category>() {
                             @Override
                             public void accept(Category category) {
                                 if (matches(result, category)) {

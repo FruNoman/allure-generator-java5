@@ -57,7 +57,7 @@ public class RetryPlugin implements Aggregator {
                 .flatMap(new Function<LaunchResults, Stream<TestResult>>() {
                     @Override
                     public Stream<TestResult> apply(LaunchResults launchResults) {
-                        return StreamSupport.stream(launchResults.getResults());
+                        return StreamSupport.stream(launchResults.getAllResults());
                     }
                 })
                 .filter(new Predicate<TestResult>() {
@@ -82,15 +82,11 @@ public class RetryPlugin implements Aggregator {
                         return merge(testResults, testResults2);
                     }
                 }));
-        byHistory.forEach(new BiConsumer<String, List<TestResult>>() {
+
+        StreamSupport.stream(byHistory.entrySet()).forEach(new Consumer<Map.Entry<String, List<TestResult>>>() {
             @Override
-            public void accept(String s, List<TestResult> testResults) {
-                findLatest(testResults).ifPresent(new Consumer<TestResult>() {
-                    @Override
-                    public void accept(TestResult testResult) {
-                        addRetries(testResults);
-                    }
-                });
+            public void accept(Map.Entry<String, List<TestResult>> testResults) {
+                findLatest(testResults.getValue()).ifPresent(addRetries(testResults.getValue()));
             }
         });
     }
@@ -98,13 +94,13 @@ public class RetryPlugin implements Aggregator {
     private Consumer<TestResult> addRetries(final List<TestResult> results) {
         return new Consumer<TestResult>() {
             @Override
-            public void accept(TestResult mainTestResult) {
+            public void accept(TestResult latest) {
                 final List<RetryItem> retries = StreamSupport.stream(results)
                         .sorted(comparingByTime())
                         .filter(new Predicate<TestResult>() {
                             @Override
-                            public boolean test(TestResult testResult) {
-                                return !mainTestResult.equals(testResult);
+                            public boolean test(TestResult result) {
+                                return !latest.equals(result);
                             }
                         })
                         .map(new Function<TestResult, TestResult>() {
@@ -120,7 +116,7 @@ public class RetryPlugin implements Aggregator {
                             }
                         })
                         .collect(Collectors.toList());
-                mainTestResult.addExtraBlock(RETRY_BLOCK_NAME, retries);
+                latest.addExtraBlock(RETRY_BLOCK_NAME, retries);
                 final Set<Status> statuses = StreamSupport.stream(retries)
                         .map(new Function<RetryItem, Status>() {
                             @Override
@@ -134,7 +130,8 @@ public class RetryPlugin implements Aggregator {
                 statuses.remove(Status.PASSED);
                 statuses.remove(Status.SKIPPED);
 
-                mainTestResult.setFlaky(!statuses.isEmpty());
+                latest.setFlaky(!statuses.isEmpty());
+
             }
         };
     }
