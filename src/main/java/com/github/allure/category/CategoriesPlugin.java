@@ -138,6 +138,7 @@ public class CategoriesPlugin extends CompositeAggregator implements Reader {
         return categories;
     }
 
+
     @SuppressWarnings("PMD.DefaultPackage")
     /* default */ static void addCategoriesForResults(final List<LaunchResults> launchesResults) {
         StreamSupport.stream(launchesResults).forEach(new Consumer<LaunchResults>() {
@@ -153,7 +154,7 @@ public class CategoriesPlugin extends CompositeAggregator implements Reader {
                     @Override
                     public void accept(TestResult result) {
                         final List<Category> resultCategories = result.getExtraBlock(CATEGORIES, new ArrayList<>());
-                        StreamSupport.stream(categories).forEach(new Consumer<Category>() {
+                        categories.forEach(new java.util.function.Consumer<Category>() {
                             @Override
                             public void accept(Category category) {
                                 if (matches(result, category)) {

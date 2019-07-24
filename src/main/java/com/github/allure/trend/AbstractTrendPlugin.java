@@ -53,14 +53,7 @@ import java8.util.stream.Stream;
 import static com.github.allure.executor.ExecutorPlugin.EXECUTORS_BLOCK_NAME;
 import static io.qameta.allure.Constants.HISTORY_DIR;
 import static java.util.Comparator.*;
-import static java.util.Spliterators.spliteratorUnknownSize;
-import static java.util.stream.StreamSupport.stream;
 
-/**
- * Encapsulates common for all trend plugins logic.
- *
- * @param <T> Trend item type
- */
 public abstract class AbstractTrendPlugin<T> extends CompositeAggregator implements Reader {
 
 
@@ -94,7 +87,8 @@ public abstract class AbstractTrendPlugin<T> extends CompositeAggregator impleme
             }).findFirst();
 
             if (file.get().exists()) {
-                try (InputStream is = new FileInputStream(file.get())) {
+                try  {
+                    InputStream is = new FileInputStream(file.get());
                     final ObjectMapper mapper = context.getValue();
                     final JsonNode jsonNode = mapper.readTree(is);
                     final List<T> history;
@@ -146,43 +140,37 @@ public abstract class AbstractTrendPlugin<T> extends CompositeAggregator impleme
 
     protected abstract Optional<T> parseItem(ObjectMapper mapper, JsonNode child) throws JsonProcessingException;
 
-    protected Optional<ExecutorInfo> extractLatestExecutor(final List<LaunchResults> launches) {
-        final Comparator<ExecutorInfo> comparator = Comparators.comparing(new Function<ExecutorInfo, Long>() {
-            @Override
-            public Long apply(ExecutorInfo executorInfo) {
-                return executorInfo.getBuildOrder();
-            }
-        }, Comparators.nullsFirst(Comparators.naturalOrder()));
-
+    protected static Optional<ExecutorInfo> extractLatestExecutor(final List<LaunchResults> launches) {
+        final Comparator<ExecutorInfo> comparator = Comparators.comparing(ExecutorInfo::getBuildOrder, Comparators.nullsFirst(Comparators.naturalOrder()));
         return StreamSupport.stream(launches)
-                .map(new Function<LaunchResults, Optional<T>>() {
+                .map(new Function<LaunchResults, Optional<Object>>() {
                     @Override
-                    public Optional<T> apply(LaunchResults launchResults) {
+                    public Optional<Object> apply(LaunchResults launchResults) {
                         return launchResults.getExtra(EXECUTORS_BLOCK_NAME);
                     }
                 })
-                .filter(new Predicate<Optional<T>>() {
+                .filter(new Predicate<Optional<Object>>() {
                     @Override
-                    public boolean test(Optional<T> tOptional) {
-                        return tOptional.isPresent();
+                    public boolean test(Optional<Object> objectOptional) {
+                        return objectOptional.isPresent();
                     }
                 })
-                .map(new Function<Optional<T>, T>() {
+                .map(new Function<Optional<Object>, Object>() {
                     @Override
-                    public T apply(Optional<T> tOptional) {
-                        return tOptional.get();
+                    public Object apply(Optional<Object> objectOptional) {
+                        return objectOptional.get();
                     }
                 })
-                .filter(new Predicate<T>() {
+                .filter(new Predicate<Object>() {
                     @Override
-                    public boolean test(T t) {
-                        return ExecutorInfo.class.isInstance(t);
+                    public boolean test(Object o) {
+                        return ExecutorInfo.class.isInstance(o);
                     }
                 })
-                .map(new Function<T, ExecutorInfo>() {
+                .map(new Function<Object, ExecutorInfo>() {
                     @Override
-                    public ExecutorInfo apply(T t) {
-                        return ExecutorInfo.class.cast(t);
+                    public ExecutorInfo apply(Object o) {
+                        return ExecutorInfo.class.cast(o);
                     }
                 })
                 .max(comparator);

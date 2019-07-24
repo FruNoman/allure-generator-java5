@@ -224,13 +224,17 @@ public class HistoryPlugin implements Reader, Aggregator {
     @Override
     public void aggregate(Configuration configuration, List<LaunchResults> launchesResults, String outputDirectory) throws IOException {
         final JacksonContext context = configuration.getContext(JacksonContext.class);
-        final File historyFile = new File(outputDirectory + File.separator + HISTORY_BLOCK_NAME + File.separator + HISTORY_FILE_NAME);
-        historyFile.getParentFile().mkdirs();
-        if (!historyFile.exists()) {
-            historyFile.createNewFile();
-        }
-        try (OutputStream os = new FileOutputStream(historyFile)) {
-            context.getValue().writeValue(os, getData(launchesResults));
-        }
+//        File historyFolder = new File(outputDirectory + File.separator + HISTORY_BLOCK_NAME);
+//        if(!historyFolder.exists()){
+//            historyFolder.mkdir();
+//        }
+//        final File historyFile = new File(outputDirectory + File.separator + HISTORY_BLOCK_NAME + File.separator + HISTORY_FILE_NAME);
+//        if (!historyFile.exists()) {
+//            historyFile.createNewFile();
+//        }
+//        try (OutputStream os = new FileOutputStream(historyFile)) {
+//            context.getValue().writeValue(os, getData(launchesResults));
+//        }
+        getData(launchesResults);
     }
 }

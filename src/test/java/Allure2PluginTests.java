@@ -114,7 +114,6 @@ public class Allure2PluginTests {
             }
         });
 
-
         System.out.println(launchList);
 
     }

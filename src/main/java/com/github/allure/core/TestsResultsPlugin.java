@@ -29,11 +29,6 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Plugin that stores test results to report data folder.
- *
- * @since 2.0
- */
 public class TestsResultsPlugin implements Aggregator {
 
     @Override
