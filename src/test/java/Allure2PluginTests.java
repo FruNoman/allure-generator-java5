@@ -15,6 +15,7 @@ import com.github.allure.status.StatusChartPlugin;
 import com.github.allure.suites.SuitesPlugin;
 import com.github.allure.summary.SummaryData;
 import com.github.allure.summary.SummaryPlugin;
+import io.qameta.allure.Aggregator;
 import io.qameta.allure.Reader;
 import io.qameta.allure.core.Configuration;
 import io.qameta.allure.core.LaunchResults;
@@ -27,6 +28,7 @@ import java8.util.stream.StreamSupport;
 import org.junit.Test;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -98,7 +100,22 @@ public class Allure2PluginTests {
                 reader.readResults(configuration, visitor, fileList);
             }
         });
-
         LaunchResults results = visitor.getLaunchResults();
+        List<LaunchResults> launchList = new ArrayList<>();
+        launchList.add(results);
+        StreamSupport.stream(configuration.getAggregators()).forEach(new Consumer<Aggregator>() {
+            @Override
+            public void accept(Aggregator aggregator) {
+                try {
+                    aggregator.aggregate(configuration, launchList,"");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
+        System.out.println(launchList);
+
     }
 }

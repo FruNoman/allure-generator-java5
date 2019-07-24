@@ -30,6 +30,8 @@ import com.github.allure.executor.ExecutorPlugin;
 import com.github.allure.history.HistoryPlugin;
 import com.github.allure.history.HistoryTrendPlugin;
 import com.github.allure.launch.LaunchPlugin;
+import com.github.allure.owner.OwnerPlugin;
+import com.github.allure.prometheus.PrometheusExportPlugin;
 import com.github.allure.retry.RetryPlugin;
 import com.github.allure.retry.RetryTrendPlugin;
 import com.github.allure.severity.SeverityPlugin;
@@ -37,6 +39,7 @@ import com.github.allure.status.StatusChartPlugin;
 import com.github.allure.suites.SuitesPlugin;
 import com.github.allure.summary.SummaryPlugin;
 
+import com.github.allure.tags.TagsPlugin;
 import com.github.allure.timeline.TimelinePlugin;
 import io.qameta.allure.Extension;
 
@@ -78,9 +81,9 @@ public class ConfigurationBuilder {
                 new MarkdownDescriptionsPlugin(),
                 new RetryPlugin(),
                 new RetryTrendPlugin(),
-//                new TagsPlugin(),
+                new TagsPlugin(),
                 new SeverityPlugin(),
-//                new OwnerPlugin(),
+                new OwnerPlugin(),
 //                new IdeaLinksPlugin(),
                 new HistoryPlugin(),
                 new HistoryTrendPlugin(),
@@ -96,7 +99,7 @@ public class ConfigurationBuilder {
                 new AttachmentsPlugin(),
 //                new MailPlugin(),
 //                new InfluxDbExportPlugin(),
-//                new PrometheusExportPlugin(),
+                new PrometheusExportPlugin(),
                 new SummaryPlugin(),
                 new ExecutorPlugin(),
                 new LaunchPlugin(),

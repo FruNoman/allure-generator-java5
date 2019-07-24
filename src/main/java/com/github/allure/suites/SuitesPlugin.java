@@ -90,7 +90,7 @@ public class SuitesPlugin extends CompositeAggregator {
     }
 
 
-    private static class JsonAggregator extends CommonJsonAggregator {
+    public static class JsonAggregator extends CommonJsonAggregator {
 
         JsonAggregator() {
             super(JSON_FILE_NAME);
