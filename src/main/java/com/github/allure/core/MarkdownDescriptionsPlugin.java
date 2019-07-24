@@ -43,13 +43,13 @@ public class MarkdownDescriptionsPlugin implements Aggregator {
     public void aggregate(final Configuration configuration,
                           final List<LaunchResults> launchesResults,
                           final String outputDirectory) {
-        Optional.of(configuration.getContext(MarkdownContext.class))
-                .ifPresent(new Consumer<MarkdownContext>() {
-                    @Override
-                    public void accept(MarkdownContext markdownContext) {
-                        processDescriptions(launchesResults, markdownContext);
-                    }
-                });
+//        Optional.of(configuration.getContext(MarkdownContext.class))
+//                .ifPresent(new Consumer<MarkdownContext>() {
+//                    @Override
+//                    public void accept(MarkdownContext markdownContext) {
+//                        processDescriptions(launchesResults, markdownContext);
+//                    }
+//                });
     }
 
     private void processDescriptions(final List<LaunchResults> launches, final MarkdownContext context) {

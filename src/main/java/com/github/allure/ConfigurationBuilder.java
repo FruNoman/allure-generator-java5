@@ -99,7 +99,7 @@ public class ConfigurationBuilder {
                 new AttachmentsPlugin(),
 //                new MailPlugin(),
 //                new InfluxDbExportPlugin(),
-                new PrometheusExportPlugin(),
+//                new PrometheusExportPlugin(),
                 new SummaryPlugin(),
                 new ExecutorPlugin(),
                 new LaunchPlugin(),

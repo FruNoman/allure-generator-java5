@@ -36,7 +36,7 @@ import java8.util.stream.Collectors;
 import java8.util.stream.Stream;
 import java8.util.stream.StreamSupport;
 
-import static io.qameta.allure.entity.TestResult.comparingByTime;
+import static io.qameta.allure.entity.TestResult.comparingByTimeAsc;
 
 /**
  * The plugin that process test retries.
@@ -96,7 +96,7 @@ public class RetryPlugin implements Aggregator {
             @Override
             public void accept(TestResult latest) {
                 final List<RetryItem> retries = StreamSupport.stream(results)
-                        .sorted(comparingByTime())
+                        .sorted(Comparators.reversed(comparingByTimeAsc()))
                         .filter(new Predicate<TestResult>() {
                             @Override
                             public boolean test(TestResult result) {
@@ -158,7 +158,7 @@ public class RetryPlugin implements Aggregator {
                         return !testResult.isHidden();
                     }
                 })
-                .min(comparingByTime());
+                .min(Comparators.reversed(comparingByTimeAsc()));
     }
 
     private List<TestResult> merge(final List<TestResult> first,

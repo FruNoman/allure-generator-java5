@@ -18,7 +18,7 @@ package com.github.allure.trend;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
+import java8.util.Optional;
 
 /**
  * Trend item data.

@@ -50,7 +50,6 @@ public class PrometheusExportPlugin extends CommonMetricAggregator {
             }
         });
 
-
         final TimeMetric timeMetric = new TimeMetric(new BiFunction<String, Long, MetricLine>() {
             @Override
             public MetricLine apply(String key, Long time) {

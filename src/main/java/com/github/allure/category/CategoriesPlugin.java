@@ -268,12 +268,12 @@ public class CategoriesPlugin extends CompositeAggregator implements Reader {
                             return toWidgetItem(testResultTreeGroup);
                         }
                     })
-                    .sorted(Comparators.comparing(new Function<TreeWidgetItem, Statistic>() {
+                    .sorted(Comparators.reversed(Comparators.comparing(new Function<TreeWidgetItem, Statistic>() {
                         @Override
                         public Statistic apply(TreeWidgetItem treeWidgetItem) {
                             return treeWidgetItem.getStatistic();
                         }
-                    }, comparator()).reversed())
+                    }, comparator())))
                     .collect(Collectors.toList());
             StreamSupport.stream(items).forEach(new Consumer<TreeWidgetItem>() {
                 @Override
@@ -316,12 +316,12 @@ public class CategoriesPlugin extends CompositeAggregator implements Reader {
                             return toWidgetItem(testResultTreeGroup);
                         }
                     })
-                    .sorted(Comparators.comparing(new Function<TreeWidgetItem, Statistic>() {
+                    .sorted(Comparators.reversed(Comparators.comparing(new Function<TreeWidgetItem, Statistic>() {
                         @Override
                         public Statistic apply(TreeWidgetItem treeWidgetItem) {
                             return treeWidgetItem.getStatistic();
                         }
-                    }, comparator()).reversed())
+                    }, comparator())))
                     .limit(10)
                     .collect(Collectors.toList());
             return new TreeWidgetData().setItems(items).setTotal(data.getChildren().size());
