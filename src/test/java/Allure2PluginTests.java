@@ -6,6 +6,7 @@ import com.github.allure.category.CategoriesTrendItem;
 import com.github.allure.category.CategoriesTrendPlugin;
 import com.github.allure.environment.Allure1EnvironmentPlugin;
 import com.github.allure.executor.ExecutorPlugin;
+import com.github.allure.features.FeaturePlugin;
 import com.github.allure.history.HistoryData;
 import com.github.allure.history.HistoryPlugin;
 import com.github.allure.severity.SeverityData;
@@ -23,6 +24,7 @@ import io.qameta.allure.entity.EnvironmentItem;
 import io.qameta.allure.entity.ExecutorInfo;
 import io.qameta.allure.entity.TestResult;
 import io.qameta.allure.tree.Tree;
+import io.qameta.allure.tree.TreeWidgetItem;
 import java8.util.function.Consumer;
 import java8.util.stream.StreamSupport;
 import org.junit.Test;
@@ -117,6 +119,10 @@ public class Allure2PluginTests {
         SummaryPlugin summaryPlugin = new SummaryPlugin();
         SummaryData summaryData = summaryPlugin.getData(launchList);
         System.out.println(summaryData);
+
+        FeaturePlugin featurePlugin = new FeaturePlugin();
+        List<TreeWidgetItem> widget = featurePlugin.getTreeWidgetItemData(launchList);
+        System.out.println(widget);
 
     }
 }

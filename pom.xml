@@ -6,7 +6,7 @@
 
     <groupId>com.github.allure</groupId>
     <artifactId>allure-generator-java5</artifactId>
-    <version>0.0.8</version>
+    <version>0.0.9</version>
 
     <repositories>
         <repository>

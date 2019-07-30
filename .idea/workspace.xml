@@ -1,106 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d096a56-5913-4157-840c-ebea4a2426d5" name="Default Changelist" comment="">
+    <list default="true" id="8d096a56-5913-4157-840c-ebea4a2426d5" name="Default Changelist" comment="add FeaturePlugin">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/features/FeaturePlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/ConfigurationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/ConfigurationBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/category/CategoriesPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/core/MarkdownDescriptionsPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/core/MarkdownDescriptionsPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/prometheus/PrometheusExportPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/prometheus/PrometheusExportPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/retry/RetryPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/retry/RetryPlugin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/trend/TrendItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/trend/TrendItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/DefaultConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/DefaultConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Allure2PluginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Allure2PluginTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/ConfigurationBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/ConfigurationBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultLaunchResults.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultLaunchResults.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/ParameterComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/ParameterComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/StageResultComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/StageResultComparator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$24.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$25.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$26.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$27.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$28.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$29.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$30.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$31.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/Allure2Plugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/TestContainerIgnoreConflictsMixin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/allure2/TestContainerIgnoreConflictsMixin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$1$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/environment/Allure1EnvironmentPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryTrendItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/history/HistoryTrendItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityLevel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityLevel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityLevel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$SeverityAggregator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin$WidgetAggregator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/severity/SeverityPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/status/StatusChartPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$JsonAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$JsonAggregator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin$WidgetAggregator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/suites/SuitesPlugin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/summary/SummaryPlugin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Allure2PluginTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Allure2PluginTests.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -166,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Allure2PluginTests.someTest (1)">
+  <component name="RunManager" selected="JUnit.Allure2PluginTests.someTest">
     <configuration name="Allure2PluginTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="allure_generator_java5" />
       <option name="PACKAGE_NAME" value="" />
@@ -218,8 +125,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Allure2PluginTests.someTest (1)" />
         <item itemvalue="JUnit.Allure2PluginTests.someTest" />
+        <item itemvalue="JUnit.Allure2PluginTests.someTest (1)" />
         <item itemvalue="JUnit.Allure2PluginTests.test (1)" />
         <item itemvalue="JUnit.Allure2PluginTests.test" />
         <item itemvalue="JUnit.Allure2PluginTests" />
@@ -363,7 +270,21 @@
       <option name="project" value="LOCAL" />
       <updated>1563977733268</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix all plugins">
+      <created>1563986157827</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1563986157827</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix all plugins">
+      <created>1563986204325</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1563986204325</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -371,7 +292,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -391,30 +314,31 @@
     <MESSAGE value="add Prometeus Tag and Owner Plugin" />
     <MESSAGE value="fix CategoryPlugin" />
     <MESSAGE value="fix category plugin" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix category plugin" />
+    <MESSAGE value="fix all plugins" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix all plugins" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java</url>
-          <line>87</line>
+          <line>89</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java</url>
-          <line>64</line>
+          <line>66</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/allure/history/HistoryPlugin.java</url>
           <line>230</line>
           <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Allure2PluginTests.java</url>
+          <line>124</line>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

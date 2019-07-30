@@ -24,6 +24,8 @@ import io.qameta.allure.core.Plugin;
 import java.util.Collections;
 import java.util.List;
 import java8.util.Optional;
+import java8.util.function.Function;
+import java8.util.function.Predicate;
 import java8.util.stream.Collectors;
 import java8.util.stream.StreamSupport;
 
@@ -52,24 +54,54 @@ public class DefaultConfiguration implements Configuration {
     @Override
     public List<Aggregator> getAggregators() {
         return StreamSupport.stream(extensions)
-                .filter(Aggregator.class::isInstance)
-                .map(Aggregator.class::cast)
+                .filter(new Predicate<Extension>() {
+                    @Override
+                    public boolean test(Extension extension) {
+                        return Aggregator.class.isInstance(extension);
+                    }
+                })
+                .map(new Function<Extension, Aggregator>() {
+                    @Override
+                    public Aggregator apply(Extension extension) {
+                        return Aggregator.class.cast(extension);
+                    }
+                })
                 .collect(Collectors.toList());
     }
 
     @Override
     public List<Reader> getReaders() {
         return StreamSupport.stream(extensions)
-                .filter(Reader.class::isInstance)
-                .map(Reader.class::cast)
+                .filter(new Predicate<Extension>() {
+                    @Override
+                    public boolean test(Extension extension) {
+                        return Reader.class.isInstance(extension);
+                    }
+                })
+                .map(new Function<Extension, Reader>() {
+                    @Override
+                    public Reader apply(Extension extension) {
+                        return Reader.class.cast(extension);
+                    }
+                })
                 .collect(Collectors.toList());
     }
 
     @Override
     public <T> T  getContext(final Class<T> contextType) {
         return StreamSupport.stream(extensions)
-                .filter(contextType::isInstance)
-                .map(contextType::cast)
+                .filter(new Predicate<Extension>() {
+                    @Override
+                    public boolean test(Extension extension) {
+                        return contextType.isInstance(extension);
+                    }
+                })
+                .map(new Function<Extension, T>() {
+                    @Override
+                    public T apply(Extension extension) {
+                        return contextType.cast(extension);
+                    }
+                })
                 .findFirst().get();
     }
 
