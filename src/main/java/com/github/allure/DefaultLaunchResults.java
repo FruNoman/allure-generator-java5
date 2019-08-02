@@ -21,6 +21,7 @@ import io.qameta.allure.entity.TestResult;
 import java8.util.function.Predicate;
 import java8.util.function.Supplier;
 
+import java.io.Serializable;
 import java.util.Map;
 import java8.util.Optional;
 import java.util.Set;
@@ -29,7 +30,7 @@ import java8.util.stream.Collectors;
 import java8.util.stream.StreamSupport;
 
 
-public class DefaultLaunchResults implements LaunchResults {
+public class DefaultLaunchResults implements LaunchResults , Serializable {
 
     private final Set<TestResult> results;
 
