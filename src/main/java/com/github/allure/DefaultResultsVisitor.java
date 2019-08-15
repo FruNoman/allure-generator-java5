@@ -100,7 +100,9 @@ public class DefaultResultsVisitor implements ResultsVisitor {
                                 return getExtensionByMimeType(realType);
                             }
                         });
-                final String source = uid + (extension.isEmpty() ? "" : extension);
+//                final String source = uid + (extension.isEmpty() ? "" : extension);
+                final String source = attachmentFile.getAbsolutePath();
+
                 final Long size = getFileSizeSafe(attachmentFile);
                 return new Attachment()
                         .setUid(uid)
