@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d096a56-5913-4157-840c-ebea4a2426d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../allure-plugin-api-java5" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -308,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565689724045</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="refactro attachment in DefaultVisitors class">
+      <created>1565861043584</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1565861043584</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -341,7 +350,8 @@
     <MESSAGE value="fix all plugins" />
     <MESSAGE value="add FeaturePlugin" />
     <MESSAGE value="add Serializable for DefaultLaunchedResults" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Serializable for DefaultLaunchedResults" />
+    <MESSAGE value="refactro attachment in DefaultVisitors class" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactro attachment in DefaultVisitors class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
