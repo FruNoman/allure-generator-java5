@@ -66,7 +66,7 @@ public class HistoryTrendPlugin extends AbstractTrendPlugin<HistoryTrendItem> {
     }
 
     @SuppressWarnings("PMD.DefaultPackage")
-    /* default */ static List<HistoryTrendItem> getData(final List<LaunchResults> launchesResults) {
+    /* default */public static List<HistoryTrendItem> getData(final List<LaunchResults> launchesResults) {
         final HistoryTrendItem item = new HistoryTrendPlugin().createCurrent(launchesResults);
         final List<HistoryTrendItem> data = getHistoryItems(launchesResults);
 

@@ -317,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565861043584</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add new api version">
+      <created>1566375736824</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1566375736824</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,7 +358,8 @@
     <MESSAGE value="add FeaturePlugin" />
     <MESSAGE value="add Serializable for DefaultLaunchedResults" />
     <MESSAGE value="refactro attachment in DefaultVisitors class" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactro attachment in DefaultVisitors class" />
+    <MESSAGE value="add new api version" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new api version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
