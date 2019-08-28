@@ -38,6 +38,7 @@ import java8.util.stream.StreamSupport;
 import static io.qameta.allure.entity.LabelName.PARENT_SUITE;
 import static io.qameta.allure.entity.LabelName.SUB_SUITE;
 import static io.qameta.allure.entity.LabelName.SUITE;
+import static io.qameta.allure.entity.TestResult.comparingByTimeAsc;
 import static io.qameta.allure.tree.TreeUtils.calculateStatisticByLeafs;
 import static io.qameta.allure.tree.TreeUtils.groupByLabels;
 
@@ -74,12 +75,7 @@ public class SuitesPlugin extends CompositeAggregator {
                         return StreamSupport.stream(testResults);
                     }
                 })
-                .sorted(new Comparator<TestResult>() {
-                    @Override
-                    public int compare(TestResult o1, TestResult o2) {
-                        return (int) (o1.getTime().getStart() - o2.getTime().getStart());
-                    }
-                })
+                .sorted(comparingByTimeAsc())
                 .forEach(new Consumer<TestResult>() {
                     @Override
                     public void accept(TestResult testResult) {

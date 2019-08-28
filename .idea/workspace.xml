@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d096a56-5913-4157-840c-ebea4a2426d5" name="Default Changelist" comment="">
+    <list default="true" id="8d096a56-5913-4157-840c-ebea4a2426d5" name="Default Changelist" comment="add new api version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/allure/DefaultResultsVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/allure/suites/SuitesPlugin.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -324,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566375736824</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add new api version">
+      <created>1566465147757</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1566465147757</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
