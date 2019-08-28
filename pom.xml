@@ -6,7 +6,7 @@
 
     <groupId>com.github.allure</groupId>
     <artifactId>allure-generator-java5</artifactId>
-    <version>0.1.6</version>
+    <version>0.1.7</version>
 
     <repositories>
         <repository>
@@ -89,7 +89,7 @@
         <dependency>
             <groupId>com.github.FruNoman</groupId>
             <artifactId>allure-plugin-api-java5</artifactId>
-            <version>0.2.8</version>
+            <version>0.3.3</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
