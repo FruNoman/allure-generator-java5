@@ -365,15 +365,11 @@ public class Allure2Plugin implements Reader {
         return stageResult;
     }
 
-    public static Stream<InputStream> listFiles(List<File> fileList, String glob) {
-        List<InputStream> list = new ArrayList<>();
+    public static Stream<File> listFiles(List<File> fileList, String glob) {
+        List<File> list = new ArrayList<>();
         for (File file : fileList) {
             if (file.getName().endsWith(glob)) {
-                try {
-                    list.add(new FileInputStream(file));
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
+                    list.add(file);
             }
         }
         return StreamSupport.stream(list);
@@ -391,10 +387,10 @@ public class Allure2Plugin implements Reader {
 
     private Stream<TestResultContainer> readTestResultsContainers(final List<File> fileList) {
         return listFiles(fileList, "-container.json")
-                .map(new Function<InputStream, Optional<TestResultContainer>>() {
+                .map(new Function<File, Optional<TestResultContainer>>() {
                     @Override
-                    public Optional<TestResultContainer> apply(InputStream inputStream) {
-                        return readTestResultContainer(inputStream);
+                    public Optional<TestResultContainer> apply(File file) {
+                        return readTestResultContainer(file);
                     }
                 })
                 .filter(new Predicate<Optional<TestResultContainer>>() {
@@ -411,20 +407,28 @@ public class Allure2Plugin implements Reader {
                 });
     }
 
-    private Optional<TestResultContainer> readTestResultContainer(final InputStream inputStream) {
+    private Optional<TestResultContainer> readTestResultContainer(final File file) {
+        InputStream inputStream = null;
         try {
+            inputStream = new FileInputStream(file);
             return Optional.ofNullable(mapper.readValue(inputStream, TestResultContainer.class));
         } catch (IOException e) {
             return Optional.empty();
+        }finally {
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     private Stream<TestResult> readTestResults(final List<File> fileList) {
         return listFiles(fileList, "-result.json")
-                .map(new Function<InputStream, Optional<TestResult>>() {
+                .map(new Function<File, Optional<TestResult>>() {
                     @Override
-                    public Optional<TestResult> apply(InputStream inputStream) {
-                        return readTestResult(inputStream);
+                    public Optional<TestResult> apply(File file) {
+                        return readTestResult(file);
                     }
                 })
                 .filter(new Predicate<Optional<TestResult>>() {
@@ -441,11 +445,19 @@ public class Allure2Plugin implements Reader {
                 });
     }
 
-    private Optional<TestResult> readTestResult(final InputStream inputStream) {
+    private Optional<TestResult> readTestResult(final File file) {
+        InputStream inputStream = null;
         try {
+            inputStream = new FileInputStream(file);
             return Optional.ofNullable(mapper.readValue(inputStream, TestResult.class));
         } catch (IOException e) {
             return Optional.empty();
+        }finally {
+            try {
+                inputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

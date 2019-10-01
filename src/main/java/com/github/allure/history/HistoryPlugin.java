@@ -209,12 +209,19 @@ public class HistoryPlugin implements Reader, Aggregator {
             }).findFirst();
             if (file.isPresent()) {
                 if (file.get().exists()) {
+                    InputStream is = null;
                     try {
-                        InputStream is = new FileInputStream(file.get());
+                        is = new FileInputStream(file.get());
                         final Map<String, HistoryData> history = context.getValue().readValue(is, HISTORY_TYPE);
                         visitor.visitExtra(HISTORY_BLOCK_NAME, history);
                     } catch (IOException e) {
                         visitor.error("Could not read history file " + file.get(), e);
+                    }finally {
+                        try {
+                            is.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }

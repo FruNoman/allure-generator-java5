@@ -154,10 +154,17 @@ public class Allure1Plugin implements Reader {
         final Properties properties = new Properties();
         if (allureProperties.isPresent()) {
             if (allureProperties.get().exists()) {
+                InputStream propFile = null;
                 try {
-                    InputStream propFile = new FileInputStream(allureProperties.get());
+                    propFile = new FileInputStream(allureProperties.get());
                     properties.load(propFile);
                 } catch (IOException e) {
+                }finally {
+                    try {
+                        propFile.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
@@ -605,21 +612,36 @@ public class Allure1Plugin implements Reader {
         }
     }
 
-    private Optional<TestSuiteResult> readXmlTestSuiteFile(final File source) {
+    private Optional<TestSuiteResult> readXmlTestSuiteFile(final File source)  {
+        InputStream is = null;
         try {
-            InputStream is = new FileInputStream(source);
+            is = new FileInputStream(source);
             return Optional.of(xmlMapper.readValue(is, TestSuiteResult.class));
         } catch (IOException e) {
+
+        } finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         return Optional.empty();
     }
 
-    private Optional<TestSuiteResult> readJsonTestSuiteFile(final File source) {
+    private Optional<TestSuiteResult> readJsonTestSuiteFile(final File source)  {
+        InputStream is = null;
         try {
-            InputStream is = new FileInputStream(source);
+            is = new FileInputStream(source);
             return Optional.of(jsonMapper.readValue(is, TestSuiteResult.class));
         } catch (IOException e) {
             return Optional.empty();
+        }finally {
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -675,8 +697,9 @@ public class Allure1Plugin implements Reader {
         final Map<String, String> items = new HashMap<>();
         if (environmentProperties.isPresent()) {
             if (environmentProperties.get().exists()) {
+                InputStream is = null;
                 try {
-                    InputStream is = new FileInputStream(environmentProperties.get());
+                    is = new FileInputStream(environmentProperties.get());
                     final Properties properties = new Properties();
                     properties.load(is);
                     Enumeration<String> enums = (Enumeration<String>) properties.propertyNames();
@@ -686,6 +709,12 @@ public class Allure1Plugin implements Reader {
                         items.put(String.valueOf(key), String.valueOf(value));
                     }
                 } catch (IOException e) {
+                }finally {
+                    try {
+                        is.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
@@ -702,8 +731,9 @@ public class Allure1Plugin implements Reader {
         final Map<String, String> items = new HashMap<>();
         if (environmentPropertiesXml.isPresent()) {
             if (environmentPropertiesXml.get().exists()) {
+                InputStream fis = null;
                 try {
-                    InputStream fis = new FileInputStream(environmentPropertiesXml.get());
+                    fis = new FileInputStream(environmentPropertiesXml.get());
                     StreamSupport.stream(xmlMapper.readValue(fis, ru.yandex.qatools.commons.model.Environment.class)
                             .getParameter())
                             .forEach(new Consumer<ru.yandex.qatools.commons.model.Parameter>() {
@@ -713,6 +743,12 @@ public class Allure1Plugin implements Reader {
                                 }
                             });
                 } catch (Exception e) {
+                }finally {
+                    try {
+                        fis.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
 

@@ -95,11 +95,19 @@ public class CategoriesPlugin extends CompositeAggregator implements Reader {
 
         if(file.isPresent()) {
             if (file.get().exists()) {
-                try (InputStream is = new FileInputStream(file.get())) {
+                InputStream is = null;
+                try  {
+                    is = new FileInputStream(file.get());
                     final List<Category> categories = context.getValue().readValue(is, CATEGORIES_TYPE);
                     visitor.visitExtra(CATEGORIES, categories);
                 } catch (IOException e) {
                     visitor.error("Could not read categories file " + file.get(), e);
+                }finally {
+                    try {
+                        is.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }

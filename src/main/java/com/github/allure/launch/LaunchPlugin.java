@@ -71,11 +71,19 @@ public class LaunchPlugin extends CommonJsonAggregator implements Reader {
             }).findFirst();
             if (launchFile.isPresent()) {
                 if (launchFile.get().exists()) {
-                    try (InputStream is = new FileInputStream(launchFile.get())) {
+                    InputStream is = null;
+                    try  {
+                        is = new FileInputStream(launchFile.get());
                         final LaunchInfo info = context.getValue().readValue(is, LaunchInfo.class);
                         visitor.visitExtra(LAUNCH_BLOCK_NAME, info);
                     } catch (IOException e) {
                         visitor.error("Could not read launch file " + launchFile.get(), e);
+                    }finally {
+                        try {
+                            is.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }

@@ -87,8 +87,9 @@ public abstract class AbstractTrendPlugin<T> extends CompositeAggregator impleme
             }).findFirst();
 
             if (file.get().exists()) {
+                InputStream is = null;
                 try  {
-                    InputStream is = new FileInputStream(file.get());
+                    is = new FileInputStream(file.get());
                     final ObjectMapper mapper = context.getValue();
                     final JsonNode jsonNode = mapper.readTree(is);
                     final List<T> history;
@@ -119,6 +120,12 @@ public abstract class AbstractTrendPlugin<T> extends CompositeAggregator impleme
                     visitor.visitExtra(trendBlockName, history);
                 } catch (IOException e) {
                     visitor.error("Could not read " + trendBlockName + " file " + historyFile, e);
+                }finally {
+                    try {
+                        is.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
